@@ -39,12 +39,11 @@ const config: Config = {
       },
 
       spacing: {
+        mainH: "179.4375rem",
         "7em": "7em",
         "12em": "12em",
         "30rem": "30rem",
-        mainH: "179.4375rem",
-        "27rem": "27rem",
-        "38rem": "38rem",
+        "40rem": "40rem",
         "0.9rem": "0.9rem",
       },
 
@@ -56,6 +55,12 @@ const config: Config = {
         headerShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px",
         AboutCardShadow: "5px 0px 8px -3px #555555",
         ProfileImageShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;",
+      },
+      transitionProperty: {
+        z: "z-index",
+      },
+      transitionDelay: {
+        2000: "2s",
       },
     },
   },

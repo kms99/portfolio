@@ -24,16 +24,16 @@ const Header = () => {
     >
       <ul className="flex font-bold justify-end [&>li>a]:p-3  [&>li:hover]:text-white [&>li+li]:ml-3 [&>li>a:hover]:bg-gray-700 [&>li>a]:w-full [&>li>a]:h-full">
         <li>
-          <Link href="#intro">Intro</Link>
+          <Link href="#intro">시작</Link>
         </li>
         <li>
-          <Link href="#about">About Me</Link>
+          <Link href="#about">소개</Link>
         </li>
         <li>
-          <Link href="#tech">Tech Stack</Link>
+          <Link href="#tech">기술</Link>
         </li>
         <li>
-          <Link href="#project">Project</Link>
+          <Link href="#project">진행한 과제</Link>
         </li>
       </ul>
     </header>

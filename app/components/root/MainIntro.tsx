@@ -33,8 +33,9 @@ const MainIntro = () => {
           <Search />
         </Link>
       </div>
+
       <section className="animate-bounce absolute bottom-32 flex flex-col items-center">
-        <span className="mb-2 font-bold">scroll</span>
+        <span className="mb-2 font-bold">내려주세요</span>
         <Down />
       </section>
     </motion.div>
