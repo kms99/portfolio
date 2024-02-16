@@ -1,15 +1,18 @@
 "use client";
 
-import MainIntro from "./components/root/MainIntro";
 import MainAbout from "./components/root/MainAbout";
-import MainTech from "./components/root/MainTech";
+import MainIntro from "./components/root/MainIntro";
 import MainProject from "./components/root/MainProject";
+import MainTech from "./components/root/MainTech";
+import PageProvider from "./contexts/PageProvider";
 
 const Home = () => {
   return (
     <div>
       <MainIntro />
-      <MainAbout />
+      <PageProvider>
+        <MainAbout />
+      </PageProvider>
       <MainTech />
       <MainProject />
     </div>

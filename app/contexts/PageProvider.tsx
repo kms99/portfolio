@@ -5,7 +5,10 @@ const initialValue = {
   handleChangePrevPage: () => {},
   handleStartAnimating: () => {},
   handleEndAnimating: () => {},
+  isActiveFirst: true,
 };
+
+const FIRST_PAGE = 1;
 
 const PageContext = createContext(initialValue);
 
@@ -14,7 +17,7 @@ const prevPage = (prev: number) => prev - 1;
 
 const PageProvider = ({ children }: PropsWithChildren) => {
   const [page, setPage] = useState<number>(1);
-  const [isAnimating, setAnimating] = useState<boolean>(false);
+  const [isAnimating, setAnimating] = useState<boolean>(true);
 
   const changePage = (setter: (prev: number) => number) => {
     if (isAnimating) return;
@@ -28,11 +31,14 @@ const PageProvider = ({ children }: PropsWithChildren) => {
   const handleStartAnimating = () => setAnimating(true);
   const handleEndAnimating = () => setAnimating(false);
 
+  const isActiveFirst = page === FIRST_PAGE;
+
   const value = {
     handleChangeNextPage,
     handleChangePrevPage,
     handleStartAnimating,
     handleEndAnimating,
+    isActiveFirst,
   };
 
   return <PageContext.Provider value={value}>{children}</PageContext.Provider>;
