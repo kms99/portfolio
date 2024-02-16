@@ -6,9 +6,11 @@ const initialValue = {
   handleStartAnimating: () => {},
   handleEndAnimating: () => {},
   isActiveFirst: true,
+  isActiveSecond: false,
 };
 
 const FIRST_PAGE = 1;
+const SECOND_PAGE = 2;
 
 const PageContext = createContext(initialValue);
 
@@ -32,6 +34,7 @@ const PageProvider = ({ children }: PropsWithChildren) => {
   const handleEndAnimating = () => setAnimating(false);
 
   const isActiveFirst = page === FIRST_PAGE;
+  const isActiveSecond = page === SECOND_PAGE;
 
   const value = {
     handleChangeNextPage,
@@ -39,6 +42,7 @@ const PageProvider = ({ children }: PropsWithChildren) => {
     handleStartAnimating,
     handleEndAnimating,
     isActiveFirst,
+    isActiveSecond,
   };
 
   return <PageContext.Provider value={value}>{children}</PageContext.Provider>;

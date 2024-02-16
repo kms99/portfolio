@@ -14,7 +14,7 @@ const AboutFirstPage = () => {
       }`}
     >
       <div
-        className="top-0 left-0 w-full h-full absolute z-20 bg-black flex flex-col items-center cursor-pointer"
+        className="top-0 left-0 w-full h-full absolute bg-black z-20 flex flex-col items-center cursor-pointer"
         onClick={handleChangeNextPage}
       >
         <Image
@@ -31,7 +31,7 @@ const AboutFirstPage = () => {
       </div>
 
       <div
-        className="top-0 left-0 w-full h-full  absolute flip z-10 bg-white border-r-2 flex flex-col items-center cursor-pointer"
+        className="top-0 left-0 w-full h-full absolute flip bg-white z-20 border-r-2 flex flex-col items-center cursor-pointer"
         onClick={handleChangePrevPage}
       >
         <span className="mt-24 font-bold">첫번째 장</span>

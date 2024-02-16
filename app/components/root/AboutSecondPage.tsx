@@ -1,23 +1,26 @@
-import Image from "next/image";
-import React, { useState } from "react";
+import { usePage } from "@/app/contexts/PageProvider";
 import Star from "@/public/img/star.svg";
+import Image from "next/image";
 
 const AboutSecondPage = () => {
-  const [isActiveSecond, setIsActiveSecond] = useState<boolean>(false);
-
-  const toggleClassSecond = () => {
-    setIsActiveSecond(prev => !prev);
-  };
+  const {
+    isActiveFirst,
+    isActiveSecond,
+    handleChangeNextPage,
+    handleChangePrevPage,
+  } = usePage();
   return (
     <div
-      className={`absolute w-full h-full shadow-AboutCardShadow origin-left transform-3d transition-z duration-0 delay-500  cursor-pointer ${
-        isActiveSecond ? "-z-20" : "z-20"
+      className={`absolute w-full h-full shadow-AboutCardShadow origin-left transform-3d transition-z duration-0 delay-500  ${
+        !isActiveSecond ? "-z-20" : "z-20"
       } [&>div]:backface-hidden ${
-        isActiveSecond ? "animate-flip" : "animate-flip-reverse"
+        !isActiveFirst ? "animate-flip" : "animate-flip-reverse"
       }`}
-      onClick={toggleClassSecond}
     >
-      <div className="flex flex-col justify-center whitespace-pre-wrap break-all top-0 left-0 w-full h-full absolute z-20 px-5 shadow-AboutCardShadow bg-white ">
+      <div
+        className="flex flex-col justify-center whitespace-pre-wrap z-10 break-all top-0 left-0 w-full h-full absolute px-5 shadow-AboutCardShadow bg-white cursor-pointer"
+        onClick={handleChangeNextPage}
+      >
         <figure className="absolute right-10 top-10 animate-pulse ">
           <Star />
         </figure>
@@ -33,7 +36,10 @@ const AboutSecondPage = () => {
   `}
         </p>
       </div>
-      <div className="top-0 left-0 w-full h-full  absolute flip z-10 bg-white border-r-2 flex flex-col items-center">
+      <div
+        className="top-0 left-0 w-full h-full z-10  absolute flip bg-white border-r-2 flex flex-col items-center cursor-pointer"
+        onClick={handleChangePrevPage}
+      >
         <span className="mt-24 font-bold">두번째 장</span>
         <h3 className="mt-16 text-3xl font-bold border-b-4 border-black">
           나를 소개합니다

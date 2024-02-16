@@ -1,9 +1,8 @@
-import React from "react";
-import School from "@/public/img/school.svg";
-import Name from "@/public/img/name.svg";
-import Email from "@/public/img/email.svg";
 import BootCamp from "@/public/img/bootcamp.svg";
+import Email from "@/public/img/email.svg";
 import Military from "@/public/img/military.svg";
+import Name from "@/public/img/name.svg";
+import School from "@/public/img/school.svg";
 import AboutInfoCard from "./AboutInfoCard";
 
 const sectionArray = [
