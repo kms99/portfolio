@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import SubTitle from "../common/SubTitle";
-import AboutFirstPage from "./AboutFirstPage";
-import AboutSecondPage from "./AboutSecondPage";
-import AboutLastPage from "./AboutLastPage";
+import React, { useState } from 'react';
+import SubTitle from '../../common/SubTitle';
+import AboutFirstPage from './AboutFirstPage';
+import AboutSecondPage from './AboutSecondPage';
+import AboutLastPage from './AboutLastPage';
 
-const MainAbout = () => {
+function MainAbout() {
   const [isActiveFirst, setIsActiveFirst] = useState<boolean>(false);
   const toggleClassFirst = () => {
     setIsActiveFirst(prev => !prev);
@@ -15,7 +15,7 @@ const MainAbout = () => {
       <SubTitle>소개</SubTitle>
       <div
         className={`w-30rem h-40rem relative z-0 transition-all duration-1000 ease-in-out ${
-          isActiveFirst ? "translate-x-1/2" : "translate-x-0"
+          isActiveFirst ? 'translate-x-1/2' : 'translate-x-0'
         }`}
       >
         {/* 표지 */}
@@ -30,6 +30,6 @@ const MainAbout = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MainAbout;

@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import MainIntro from "./components/root/MainIntro";
-import MainAbout from "./components/root/MainAbout";
-import MainTech from "./components/root/MainTech";
-import MainProject from "./components/root/MainProject";
+import MainIntro from './components/sections/intro/MainIntro';
+import MainAbout from './components/sections/about/MainAbout';
+import MainTech from './components/sections/tech/MainTech';
+import MainProject from './components/sections/project/MainProject';
 
-const Home = () => {
+function Home() {
   return (
     <div>
       <MainIntro />
@@ -14,6 +14,6 @@ const Home = () => {
       <MainProject />
     </div>
   );
-};
+}
 
 export default Home;

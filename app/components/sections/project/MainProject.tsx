@@ -1,7 +1,7 @@
-import React from "react";
-import SubTitle from "../common/SubTitle";
+import React from 'react';
+import SubTitle from '../../common/SubTitle';
 
-const MainProject = () => {
+function MainProject() {
   return (
     <section
       className="h-screen flex flex-col items-center relative"
@@ -16,6 +16,6 @@ const MainProject = () => {
       </ul>
     </section>
   );
-};
+}
 
 export default MainProject;

@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 
-const Header = () => {
+function Header() {
   const [isTop, setIsTop] = useState<boolean>(true);
-  const topStyle = "shadow-none";
-  const noTopStyle = "shadow-headerShadow backdrop-blur-md";
+  const topStyle = 'shadow-none';
+  const noTopStyle = 'shadow-headerShadow backdrop-blur-md';
 
   useEffect(() => {
     const checkScroll = () => {
       setIsTop(window.scrollY === 0);
     };
 
-    window.addEventListener("scroll", checkScroll);
+    window.addEventListener('scroll', checkScroll);
   }, [isTop]);
 
   return (
@@ -38,6 +38,6 @@ const Header = () => {
       </ul>
     </header>
   );
-};
+}
 
 export default Header;

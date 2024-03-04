@@ -1,10 +1,12 @@
-import Link from "next/link";
-import React, { useState } from "react";
-import Search from "@/public/img/search.svg";
-import Down from "@/public/img/down.svg";
-import { motion } from "framer-motion";
+import Link from 'next/link';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import Down from 'public/img/down.svg';
+import Search from 'public/img/search.svg';
+import { ONE_LINE_NAME } from './constants';
 
-const MainIntro = () => {
+function MainIntro() {
   const [checkViewPort, setCheckViewPort] = useState<boolean>(false);
 
   return (
@@ -21,10 +23,10 @@ const MainIntro = () => {
       <div className="border-black border-4 w-12em text-5xl py-6 px-4 relative">
         <h2
           className={`font-bold w-7em ${
-            checkViewPort && "animate-typing"
+            checkViewPort && 'animate-typing'
           } whitespace-nowrap overflow-hidden border-r border-black`}
         >
-          낭만있는개발자
+          {ONE_LINE_NAME}
         </h2>
         <Link
           className="absolute right-8 top-1/2 -translate-y-1/2"
@@ -40,6 +42,6 @@ const MainIntro = () => {
       </section>
     </motion.div>
   );
-};
+}
 
 export default MainIntro;

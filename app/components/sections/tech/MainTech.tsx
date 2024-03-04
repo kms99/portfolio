@@ -1,6 +1,6 @@
 import React from "react";
-import SubTitle from "../common/SubTitle";
-import TechContainer from "../common/TechContainer";
+import SubTitle from "../../common/SubTitle";
+import TechContainer from "../../common/TechContainer";
 
 const TechName = ["Communication", "Backend", "Frontend"];
 
