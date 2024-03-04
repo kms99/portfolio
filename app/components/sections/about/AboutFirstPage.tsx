@@ -1,28 +1,28 @@
-import React from "react";
-import Image from "next/image";
-import Scope from "@/public/img/scope.svg";
+import React from 'react';
+import Image from 'next/image';
+import { Scope } from '@/public/assets/about';
 
 type AboutFirstPageProps = {
   isActiveFirst: boolean;
   toggleClassFirst: () => void;
 };
 
-const AboutFirstPage = ({
+function AboutFirstPage({
   isActiveFirst,
   toggleClassFirst,
-}: AboutFirstPageProps) => {
+}: AboutFirstPageProps) {
   return (
     <div
       className={`absolute w-full h-full shadow-AboutCardShadow origin-left transform-3d transition-z duration-0 delay-500 cursor-pointer ${
-        isActiveFirst ? "-z-30" : "z-30"
+        isActiveFirst ? '-z-30' : 'z-30'
       }  [&>div]:backface-hidden ${
-        isActiveFirst ? "animate-flip" : "animate-flip-reverse"
+        isActiveFirst ? 'animate-flip' : 'animate-flip-reverse'
       }`}
       onClick={toggleClassFirst}
     >
       <div className="top-0 left-0 w-full h-full absolute z-20 bg-black flex flex-col items-center">
         <Image
-          src={"/img/bg.jpg"}
+          src="/img/bg.jpg"
           width={1920}
           height={1280}
           alt="first"
@@ -43,6 +43,6 @@ const AboutFirstPage = ({
       </div>
     </div>
   );
-};
+}
 
 export default AboutFirstPage;

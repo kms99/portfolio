@@ -1,8 +1,8 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import Star from "@/public/img/star.svg";
+import { Star } from '@/public/assets/about';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
-const AboutSecondPage = () => {
+function AboutSecondPage() {
   const [isActiveSecond, setIsActiveSecond] = useState<boolean>(false);
 
   const toggleClassSecond = () => {
@@ -11,9 +11,9 @@ const AboutSecondPage = () => {
   return (
     <div
       className={`absolute w-full h-full shadow-AboutCardShadow origin-left transform-3d transition-z duration-0 delay-500  cursor-pointer ${
-        isActiveSecond ? "-z-20" : "z-20"
+        isActiveSecond ? '-z-20' : 'z-20'
       } [&>div]:backface-hidden ${
-        isActiveSecond ? "animate-flip" : "animate-flip-reverse"
+        isActiveSecond ? 'animate-flip' : 'animate-flip-reverse'
       }`}
       onClick={toggleClassSecond}
     >
@@ -21,7 +21,7 @@ const AboutSecondPage = () => {
         <figure className="absolute right-10 top-10 animate-pulse ">
           <Star />
         </figure>
-        <h3 className=" text-3xl mt-8 mb-8 font-bold">{'"낭만"'}</h3>
+        <h3 className=" text-3xl mt-8 mb-8 font-bold">"낭만"</h3>
         <p className="leading-7 text-lg whitespace-pre-wrap">
           {`안녕하십니까. 
 
@@ -48,6 +48,6 @@ const AboutSecondPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default AboutSecondPage;

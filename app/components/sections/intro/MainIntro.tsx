@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Down from 'public/img/down.svg';
-import Search from 'public/img/search.svg';
+import { Down, Search } from '@/public/assets/intro';
 import { ONE_LINE_NAME } from './constants';
 
 function MainIntro() {

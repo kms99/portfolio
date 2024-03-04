@@ -1,24 +1,24 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from 'react';
 
 type AboutInfoCardProps = {
   title: string;
-  icon: React.JSX.Element;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 
-const AboutInfoCard = ({
+function AboutInfoCard({
   children,
   title,
   icon,
-}: PropsWithChildren<AboutInfoCardProps>) => {
+}: PropsWithChildren<AboutInfoCardProps>) {
   return (
     <section className="my-3 [&>p]:flex [&>p]:flex-col [&>span]:text-2xl [&>p>span]:text-lg [&>p>span+span]:text-2xl">
-      <label htmlFor="" className="flex mb-2 border-b-2">
-        {icon}
+      <div className="flex mb-2 border-b-2">
+        {React.createElement(icon)}
         <span className="ml-2 text-lg font-bold">{title}</span>
-      </label>
+      </div>
       {children}
     </section>
   );
-};
+}
 
 export default AboutInfoCard;

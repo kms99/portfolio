@@ -1,25 +1,22 @@
-import React from "react";
-import School from "@/public/img/school.svg";
-import Name from "@/public/img/name.svg";
-import Email from "@/public/img/email.svg";
-import BootCamp from "@/public/img/bootcamp.svg";
-import Military from "@/public/img/military.svg";
-import AboutInfoCard from "./AboutInfoCard";
+import React from 'react';
+
+import { School, Bootcamp, Email, Military, Name } from '@/public/assets/about';
+import AboutInfoCard from './AboutInfoCard';
 
 const sectionArray = [
   {
-    title: "이름",
-    titleIcon: <Name />,
+    title: '이름',
+    titleIcon: Name,
     context: <span>김명섭</span>,
   },
   {
-    title: "메일",
-    titleIcon: <Email />,
+    title: '메일',
+    titleIcon: Email,
     context: <span>audtjq213@gmail.com</span>,
   },
   {
-    title: "학력",
-    titleIcon: <School />,
+    title: '학력',
+    titleIcon: School,
     context: (
       <p>
         <span>2017.03 ~ 2021.02</span>
@@ -28,8 +25,8 @@ const sectionArray = [
     ),
   },
   {
-    title: "군경력",
-    titleIcon: <Military />,
+    title: '군경력',
+    titleIcon: Military,
     context: (
       <p>
         <span>2021.03 ~ 2023.06</span>
@@ -38,8 +35,8 @@ const sectionArray = [
     ),
   },
   {
-    title: "부트캠프",
-    titleIcon: <BootCamp />,
+    title: '부트캠프',
+    titleIcon: Bootcamp,
     context: (
       <p>
         <span>2023.10 ~ 2024.02</span>
@@ -49,14 +46,14 @@ const sectionArray = [
   },
 ];
 
-const AboutLastPage = () => {
+function AboutLastPage() {
   return (
     <div className="flex items-center top-0 left-0 w-full h-full absolute z-10 shadow-AboutCardShadow">
       <div className=" flex flex-col justify-center px-6 bg-white rounded-lg">
-        {sectionArray.map((section, index) => {
+        {sectionArray.map(section => {
           return (
             <AboutInfoCard
-              key={index}
+              key={section.title}
               title={section.title}
               icon={section.titleIcon}
             >
@@ -67,6 +64,6 @@ const AboutLastPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default AboutLastPage;

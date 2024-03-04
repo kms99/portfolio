@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import { NAV_ITEMS } from './constants';
 
 function Header() {
   const [isTop, setIsTop] = useState<boolean>(true);
@@ -23,18 +24,11 @@ function Header() {
       }`}
     >
       <ul className="flex font-bold justify-end [&>li>a]:p-3  [&>li:hover]:text-white [&>li+li]:ml-3 [&>li>a:hover]:bg-gray-700 [&>li>a]:w-full [&>li>a]:h-full">
-        <li>
-          <Link href="#intro">시작</Link>
-        </li>
-        <li>
-          <Link href="#about">소개</Link>
-        </li>
-        <li>
-          <Link href="#tech">기술</Link>
-        </li>
-        <li>
-          <Link href="#project">진행한 과제</Link>
-        </li>
+        {NAV_ITEMS.map(nav => (
+          <li id={nav.id}>
+            <Link href={nav.id.split('-')[1]}>{nav.text}</Link>
+          </li>
+        ))}
       </ul>
     </header>
   );
