@@ -1,6 +1,9 @@
 import {
+  Blog,
   Bootcamp,
   Email,
+  Github,
+  Medal,
   Military,
   Name,
   School,
@@ -23,13 +26,13 @@ export const MY_INFO: AboutInfoItem[] = [
   },
   {
     title: '깃허브',
-    titleIcon: Email,
+    titleIcon: Github,
     contexts: 'https://github.com/kms99',
     link: 'https://github.com/kms99',
   },
   {
     title: '블로그',
-    titleIcon: Email,
+    titleIcon: Blog,
     contexts: 'https://audtjqxx.tistory.com/',
     link: 'https://audtjqxx.tistory.com/',
   },
@@ -71,7 +74,7 @@ export const MY_CAREER: AboutCareerItem[] = [
   },
   {
     title: '수상',
-    titleIcon: Bootcamp,
+    titleIcon: Medal,
     contexts: [
       {
         duration: '2023.02',
