@@ -1,10 +1,10 @@
-import React from "react";
-import SubTitle from "../../common/SubTitle";
-import TechContainer from "../../common/TechContainer";
+import React from 'react';
+import SubTitle from '../../common/SubTitle';
+import TechContainer from '../../common/TechContainer';
 
-const TechName = ["Communication", "Backend", "Frontend"];
+const TechName = ['Communication', 'Backend', 'Frontend'];
 
-const MainTech = () => {
+export default function TechSection() {
   return (
     <section className="h-screen flex flex-col items-center relative" id="tech">
       <SubTitle>기술스택</SubTitle>
@@ -15,6 +15,4 @@ const MainTech = () => {
       </div>
     </section>
   );
-};
-
-export default MainTech;
+}

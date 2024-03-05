@@ -1,7 +1,7 @@
 import React from 'react';
 import SubTitle from '../../common/SubTitle';
 
-function MainProject() {
+export default function ProjectSection() {
   return (
     <section
       className="h-screen flex flex-col items-center relative"
@@ -17,5 +17,3 @@ function MainProject() {
     </section>
   );
 }
-
-export default MainProject;

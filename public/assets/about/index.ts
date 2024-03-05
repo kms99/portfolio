@@ -3,7 +3,15 @@ import Email from './email.svg';
 import Bootcamp from './bootcamp.svg';
 import Military from './military.svg';
 import School from './school.svg';
-import Scope from './scope.svg';
-import Star from './star.svg';
+import Intro from './intro.svg';
+import Career from './career.svg';
 
-export { Name, Email, Bootcamp, Military, School, Scope, Star };
+export {
+  Name,
+  Email,
+  Bootcamp,
+  Military,
+  School,
+  Intro,
+  Career,
+};

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import SearchBox from './SearchBox';
-import DownBounce from './DownBounce';
+import SearchBox from './IntroSearchBox';
+import DownBounce from './IntroDownBounce';
 
-export default function MainIntro() {
+export default function IntroSection() {
   const [checkViewPort, setCheckViewPort] = useState<boolean>(false);
 
   const handleCheckViewPort = (isCurrentViewPort: boolean) =>

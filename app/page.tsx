@@ -1,19 +1,22 @@
 'use client';
 
-import MainIntro from './components/sections/intro/MainIntro';
-import MainAbout from './components/sections/about/MainAbout';
-import MainTech from './components/sections/tech/MainTech';
-import MainProject from './components/sections/project/MainProject';
+import {
+  AboutSection,
+  IntroSection,
+  ProjectSection,
+  TechSection,
+} from './components/sections';
+import BookProvider from './contexts/bookContext';
 
-function Home() {
+export default function Home() {
   return (
-    <div>
-      <MainIntro />
-      <MainAbout />
-      <MainTech />
-      <MainProject />
-    </div>
+    <>
+      <IntroSection />
+      <BookProvider>
+        <AboutSection />
+      </BookProvider>
+      <TechSection />
+      <ProjectSection />
+    </>
   );
 }
-
-export default Home;
