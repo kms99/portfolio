@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <RecoilRootWrapper>
           <Header />
           {children}
+          <div id="modal-portal" />
         </RecoilRootWrapper>
       </body>
     </html>
