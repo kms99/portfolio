@@ -13,7 +13,7 @@ export default function Header() {
 
   const $topStyle = 'shadow-none';
   const $noTopStyle = 'shadow-headerShadow backdrop-blur-md';
-  const [projectmodalState] = useRecoilState(projectModalState);
+  const [projectState] = useRecoilState(projectModalState);
 
   useEffect(() => {
     const checkScroll = () => {
@@ -28,7 +28,7 @@ export default function Header() {
         isTop ? $topStyle : $noTopStyle
       }`}
     >
-      {projectmodalState.isOpen && createPortal(<ProjectModal />, document.getElementById('modal-portal')!)}
+      {projectState.isOpen && createPortal(<ProjectModal />, document.getElementById('modal-portal')!)}
 
       <ul className="flex font-bold justify-end">
         {NAV_ITEMS.map(nav => (

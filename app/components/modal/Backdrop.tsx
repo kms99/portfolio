@@ -1,20 +1,15 @@
-import { projectModalState } from '@/app/states/atoms';
+import useModal from '@/app/hooks/useModal';
 import React, { PropsWithChildren } from 'react';
-import { useSetRecoilState } from 'recoil';
 
 export default function Backdrop({ children }: PropsWithChildren) {
-  const setCloseModal = useSetRecoilState(projectModalState);
-  const handleClose = () => {
-    const resetProjectState = { selectProject: null, isOpen: false };
-    setCloseModal(resetProjectState);
-  };
+  const { closeProject } = useModal();
   return (
     <div
-      className="z-50 fixed left-0 top-0 w-screen h-screen bg-black opacity-30"
+      className="z-50 fixed left-0 top-0 w-screen h-screen backdrop-blur-sm"
       role="button"
-      onClick={handleClose}
+      onClick={closeProject}
       onKeyDown={e => {
-        if (e.key === 'Enter') handleClose();
+        if (e.key === 'Enter') closeProject();
       }}
       tabIndex={0}
     >

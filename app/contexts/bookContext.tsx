@@ -1,11 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  PropsWithChildren,
-  useState,
-  useMemo,
-  useCallback,
-} from 'react';
+import React, { createContext, useContext, PropsWithChildren, useState, useMemo, useCallback } from 'react';
 import { BookMode } from '../types/enums';
 
 interface BookContextType {
@@ -18,14 +11,10 @@ const initialState: BookContextType = {
   changePage: () => {},
 };
 
-export const BookContext =
-  createContext<BookContextType>(initialState);
+export const BookContext = createContext<BookContextType>(initialState);
 
-export default function BookProvider({
-  children,
-}: PropsWithChildren) {
-  const [currentPage, setCurrentPage] =
-    useState<number>(initialState.currentPage);
+export default function BookProvider({ children }: PropsWithChildren) {
+  const [currentPage, setCurrentPage] = useState<number>(initialState.currentPage);
 
   const MAX_PAGE = 4;
 
@@ -50,12 +39,7 @@ export default function BookProvider({
     [currentPage, changePage],
   );
 
-  return (
-    <BookContext.Provider value={value}>
-      {children}
-    </BookContext.Provider>
-  );
+  return <BookContext.Provider value={value}>{children}</BookContext.Provider>;
 }
 
-export const useBookContext = () =>
-  useContext(BookContext);
+export const useBookContext = () => useContext(BookContext);
