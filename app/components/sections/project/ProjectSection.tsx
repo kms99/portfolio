@@ -9,7 +9,7 @@ export default function ProjectSection() {
       <SubTitle>프로젝트</SubTitle>
       <ul className="grid grid-cols-3 justify-items-center gap-8">
         {PROJECT_LISTS.map(project => (
-          <ProjectCard project={project} />
+          <ProjectCard key={project.title} project={project} />
         ))}
       </ul>
     </section>

@@ -1,7 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useBookContext } from '@/app/contexts/bookContext';
 import FirstPageFront from './FirstPageFront';
 import FirstPageBack from './FirstPageBack';
@@ -9,11 +6,9 @@ import FirstPageBack from './FirstPageBack';
 export default function AboutFirstPage() {
   const { currentPage } = useBookContext();
 
-  const [isActive, setIsActive] =
-    useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(false);
 
-  const [animateState, setAnimateState] =
-    useState<string | null>(null);
+  const [animateState, setAnimateState] = useState<string | null>(null);
 
   const handleCheckClick = () => {
     setIsActive(true);
@@ -32,9 +27,7 @@ export default function AboutFirstPage() {
   return (
     <div
       className={`absolute w-full h-full shadow-AboutCardShadow origin-left transform-3d transition-z duration-0 delay-500 cursor-pointer 
-      ${
-        !currentPage ? 'z-30' : '-z-30'
-      }  [&>div]:backface-hidden ${animateState}`}
+      ${!currentPage ? 'z-30' : '-z-30'}  [&>div]:backface-hidden ${animateState}`}
       onClick={handleCheckClick}
       role="button"
       aria-label="About page flip"

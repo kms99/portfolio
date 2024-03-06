@@ -7,16 +7,10 @@ import AboutInnerCard from '../AboutInnerCard';
 import AboutPageSideDiv from '../AboutPageSideDiv';
 
 export default function ThirdPageFront() {
-  const renderContext = (
-    section: AboutInfoItem,
-  ) => {
+  const renderContext = (section: AboutInfoItem) => {
     if (section.link) {
       return (
-        <Link
-          href={section.contexts}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={section.contexts} target="_blank" rel="noopener noreferrer">
           {section.contexts}
         </Link>
       );
@@ -27,11 +21,7 @@ export default function ThirdPageFront() {
 
   const CARD_ITEMS = MY_INFO.map(section => {
     return (
-      <AboutInnerCard
-        key={section.title}
-        title={section.title}
-        icon={section.titleIcon}
-      >
+      <AboutInnerCard key={section.title} title={section.title} icon={section.titleIcon}>
         {renderContext(section)}
       </AboutInnerCard>
     );
@@ -41,9 +31,7 @@ export default function ThirdPageFront() {
       mode={BookMode.NEXT}
       $style="flex items-center top-0 left-0 w-full h-full absolute z-20 shadow-AboutCardShadow bg-white"
     >
-      <div className=" flex flex-col justify-center px-6 bg-white rounded-lg w-full">
-        {CARD_ITEMS}
-      </div>
+      <div className=" flex flex-col justify-center px-6 bg-white rounded-lg w-full">{CARD_ITEMS}</div>
     </AboutPageSideDiv>
   );
 }

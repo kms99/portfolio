@@ -1,7 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useBookContext } from '@/app/contexts/bookContext';
 import SecondPageFront from './SecondPageFront';
 import SecondPageBack from './SecondPageBack';
@@ -9,11 +6,9 @@ import SecondPageBack from './SecondPageBack';
 function AboutSecondPage() {
   const { currentPage } = useBookContext();
 
-  const [isActive, setIsActive] =
-    useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(false);
 
-  const [animateState, setAnimateState] =
-    useState<string | null>(null);
+  const [animateState, setAnimateState] = useState<string | null>(null);
 
   const handleCheckClick = () => {
     setIsActive(true);

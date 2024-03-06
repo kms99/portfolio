@@ -10,17 +10,13 @@ export interface AboutCareerItemType {
 
 export interface AboutInfoItem {
   title: string;
-  titleIcon: React.FC<
-    React.SVGProps<SVGSVGElement>
-  >;
+  titleIcon: React.FC<React.SVGProps<SVGSVGElement>>;
   contexts: string;
   link?: string;
 }
 
 export interface AboutCareerItem {
   title: string;
-  titleIcon: React.FC<
-    React.SVGProps<SVGSVGElement>
-  >;
+  titleIcon: React.FC<React.SVGProps<SVGSVGElement>>;
   contexts: AboutCareerItemType[];
 }

@@ -1,7 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useBookContext } from '@/app/contexts/bookContext';
 import ThirdPageFront from './ThirdPageFront';
@@ -10,11 +7,9 @@ import ThirdPageBack from './ThirdPageBack';
 export default function AboutThirdPage() {
   const { currentPage } = useBookContext();
 
-  const [isActive, setIsActive] =
-    useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(false);
 
-  const [animateState, setAnimateState] =
-    useState<string | null>(null);
+  const [animateState, setAnimateState] = useState<string | null>(null);
 
   const handleCheckClick = () => {
     setIsActive(true);

@@ -6,8 +6,7 @@ import DownBounce from './IntroDownBounce';
 export default function IntroSection() {
   const [checkViewPort, setCheckViewPort] = useState<boolean>(false);
 
-  const handleCheckViewPort = (isCurrentViewPort: boolean) =>
-    setCheckViewPort(isCurrentViewPort);
+  const handleCheckViewPort = (isCurrentViewPort: boolean) => setCheckViewPort(isCurrentViewPort);
 
   return (
     <motion.div

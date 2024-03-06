@@ -7,11 +7,7 @@ interface Props {
   mode: BookMode;
 }
 
-export default function AboutPageSideDiv({
-  children,
-  $style,
-  mode,
-}: PropsWithChildren<Props>) {
+export default function AboutPageSideDiv({ children, $style, mode }: PropsWithChildren<Props>) {
   const { changePage } = useBookContext();
 
   const handleChangePage = () => {
