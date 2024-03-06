@@ -1,17 +1,5 @@
-import {
-  Blog,
-  Bootcamp,
-  Email,
-  Github,
-  Medal,
-  Military,
-  Name,
-  School,
-} from '@/public/assets/about';
-import {
-  AboutInfoItem,
-  AboutCareerItem,
-} from './about.type';
+import { Blog, Bootcamp, Email, Github, Medal, Military, Name, School } from '@/public/assets/about';
+import { AboutInfoItem, AboutCareerItem } from './about.type';
 
 export const MY_INFO: AboutInfoItem[] = [
   {
@@ -45,8 +33,7 @@ export const MY_CAREER: AboutCareerItem[] = [
     contexts: [
       {
         duration: '2017.03 ~ 2021.02',
-        details:
-          '상명대학교(천안) 정보통신공학과',
+        details: '상명대학교(천안) 정보통신공학과',
       },
     ],
   },
@@ -56,8 +43,7 @@ export const MY_CAREER: AboutCareerItem[] = [
     contexts: [
       {
         duration: '2021.03 ~ 2023.06',
-        details:
-          '육군 정보통신병과 장교(중위) 전역',
+        details: '육군 정보통신병과 장교(중위) 전역',
       },
     ],
   },
@@ -77,15 +63,13 @@ export const MY_CAREER: AboutCareerItem[] = [
     titleIcon: Medal,
     contexts: [
       {
-        duration: '2023.02',
-        details:
-          '내일배움캠프 웹트랙 3기(React) 최종프로젝트 최우수상',
+        duration: '2024.02',
+        details: '내일배움캠프 웹트랙 3기(React) 최종프로젝트 최우수상',
         link: 'https://drive.google.com/file/d/1zAPTuTxliH7Qp2BbovWl_3AZ5-dX--eR/view?usp=drive_link',
       },
       {
-        duration: '2023.01',
-        details:
-          '2024 내일배움캠프 JavaScript 타임어택 해커톤 우수상',
+        duration: '2024.01',
+        details: '2024 내일배움캠프 JavaScript 타임어택 해커톤 우수상',
         link: 'https://drive.google.com/file/d/1cILIug4in192ig797QpICcnvysqQMbvr/view?usp=drive_link',
       },
     ],

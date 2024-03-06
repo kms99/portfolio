@@ -1,7 +1,7 @@
 import { BookMode } from '@/app/types/enums';
 import React from 'react';
 import Image from 'next/image';
-import profile from '@/public/assets/profileImg.jpg';
+import profile from '@/public/assets/about/profileImg.jpg';
 import AboutPageSideDiv from '../AboutPageSideDiv';
 
 export default function FirstPageBack() {

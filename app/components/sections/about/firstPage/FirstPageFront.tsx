@@ -1,7 +1,7 @@
 import { BookMode } from '@/app/types/enums';
 import Image from 'next/image';
 import React from 'react';
-import bookImg from '@/public/assets/bookImg.png';
+import bookImg from '@/public/assets/about/bookImg.png';
 import AboutPageSideDiv from '../AboutPageSideDiv';
 
 export default function FirstPageFront() {

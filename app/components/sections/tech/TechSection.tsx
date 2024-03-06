@@ -1,12 +1,7 @@
 import React from 'react';
 import SubTitle from '../../common/SubTitle';
 import TechContainer from './TechContainer';
-
-const TechName = [
-  'Communication',
-  'Backend',
-  'Frontend',
-];
+import { TechName } from './constants';
 
 export default function TechSection() {
   return (

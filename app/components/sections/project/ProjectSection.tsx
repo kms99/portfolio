@@ -1,18 +1,16 @@
 import React from 'react';
 import SubTitle from '../../common/SubTitle';
+import ProjectCard from './ProjectCard';
+import { PROJECT_LISTS } from './constants';
 
 export default function ProjectSection() {
   return (
-    <section
-      className="h-screen flex flex-col items-center relative"
-      id="project"
-    >
+    <section className="h-screen flex flex-col items-center relative" id="project">
       <SubTitle>프로젝트</SubTitle>
-      <ul>
-        <li>프로젝트1</li>
-        <li>프로젝트2</li>
-        <li>프로젝트3</li>
-        <li>프로젝트4</li>
+      <ul className="grid grid-cols-3 justify-items-center gap-8">
+        {PROJECT_LISTS.map(project => (
+          <ProjectCard project={project} />
+        ))}
       </ul>
     </section>
   );

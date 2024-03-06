@@ -1,7 +1,4 @@
-export const Tech: Record<
-  string,
-  Array<string>
-> = {
+export const Tech: Record<string, Array<string>> = {
   Communication: ['figma', 'git'],
   Backend: ['firebase', 'supabase'],
   Frontend: [
@@ -18,3 +15,5 @@ export const Tech: Record<
     'react-query',
   ],
 };
+
+export const TechName = ['Frontend', 'Backend', 'Communication'];
