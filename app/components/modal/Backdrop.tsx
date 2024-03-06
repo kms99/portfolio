@@ -3,13 +3,16 @@ import React, { PropsWithChildren } from 'react';
 
 export default function Backdrop({ children }: PropsWithChildren) {
   const { closeProject } = useModal();
+  const handleCloseProjectModal = (e: React.MouseEvent<HTMLDivElement> | React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.currentTarget === e.target) closeProject();
+  };
   return (
     <div
       className="z-50 fixed left-0 top-0 w-screen h-screen backdrop-blur-sm"
       role="button"
-      onClick={closeProject}
+      onClick={handleCloseProjectModal}
       onKeyDown={e => {
-        if (e.key === 'Enter') closeProject();
+        if (e.key === 'Enter') handleCloseProjectModal(e);
       }}
       tabIndex={0}
     >

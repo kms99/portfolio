@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { useSetRecoilState } from 'recoil';
-import { projectModalState } from '@/app/states/atoms';
+import { projectModalState } from '@/app/states/recoil/atoms';
 import { Project } from './project.type';
 import ProjectTechTag from './ProjectTechTag';
 

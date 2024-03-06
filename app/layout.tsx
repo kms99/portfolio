@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from './components/common/layout/Header';
-import RecoilRootWrapper from './states/RecoilRootWrapper';
+import RecoilRootWrapper from './states/recoil/RecoilRootWrapper';
+import TanstackQueryWrapper from './states/tanstackQuery/TanstackQueryWrapper';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,11 +16,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <RecoilRootWrapper>
-          <Header />
-          {children}
-          <div id="modal-portal" />
-        </RecoilRootWrapper>
+        <TanstackQueryWrapper>
+          <RecoilRootWrapper>
+            <Header />
+            {children}
+            <div id="modal-portal" />
+          </RecoilRootWrapper>
+        </TanstackQueryWrapper>
       </body>
     </html>
   );
