@@ -4,9 +4,14 @@ enum BookMode {
 }
 
 enum ProjectItemType {
-  'link',
-  'text',
-  'tag',
+  'LINK',
+  'TEXT',
+  'TAG',
 }
 
-export { BookMode, ProjectItemType };
+enum ProjectDetailType {
+  'CONTRIBUTE',
+  'TROUBLE',
+}
+
+export { BookMode, ProjectItemType, ProjectDetailType };

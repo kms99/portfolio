@@ -16,7 +16,7 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
     itemText: string | Tables<'front_tech'>[] | Tables<'back_tech'>[] | undefined,
   ) => {
     switch (itemMode) {
-      case ProjectItemType.link:
+      case ProjectItemType.LINK:
         if (typeof itemText === 'string') {
           return (
             <Link href={itemText} className="[&:hover]:underline" target="_blank" rel="noopener noreferrer">
@@ -26,7 +26,7 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
         }
         return <p />;
 
-      case ProjectItemType.tag:
+      case ProjectItemType.TAG:
         if (typeof itemText === 'object') {
           return (
             <div className="flex flex-wrap gap-y-2">
@@ -46,7 +46,7 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
     }
   };
   return (
-    <div className="py-2 [&+div]:border-t-2 [&+div]:border-slate-800 break-all w-30rem">
+    <div className="py-2 [&+div]:border-t-2 [&+div]:border-slate-800 break-all w-full">
       <h2 className="font-bold text-lg">{title}</h2>
       {currentMode(mode, text)}
     </div>

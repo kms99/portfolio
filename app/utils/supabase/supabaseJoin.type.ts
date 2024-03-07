@@ -28,6 +28,7 @@ export interface Back_tech {
 export interface Contribute {
   id: string;
   project_id: string;
+  title: string;
   context: string;
 }
 

@@ -31,16 +31,19 @@ export type Database = {
       };
       contribute: {
         Row: {
+          title: string;
           context: string;
           id: string;
           project_id: string;
         };
         Insert: {
+          title: string;
           context: string;
           id?: string;
           project_id?: string;
         };
         Update: {
+          title?: string;
           context?: string;
           id?: string;
           project_id?: string;

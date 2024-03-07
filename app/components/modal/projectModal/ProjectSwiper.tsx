@@ -12,7 +12,7 @@ interface Props {
 }
 export default function ProjectSwiper({ imgList }: Props) {
   return (
-    <div>
+    <div className="w-3/5">
       <Swiper
         modules={[Navigation, Pagination, Mousewheel]}
         spaceBetween={0}
@@ -28,7 +28,7 @@ export default function ProjectSwiper({ imgList }: Props) {
           clickable: true,
           type: 'fraction',
         }}
-        className="w-40rem h-auto"
+        className="w-full h-full"
       >
         {imgList?.map(imgInfo => (
           <SwiperSlide key={imgInfo.id}>

@@ -11,32 +11,32 @@ export default function ProjectDetailInfo({ projectData }: Props) {
   const innerSectionList = [
     {
       title: '주요기능',
-      mode: ProjectItemType.text,
+      mode: ProjectItemType.TEXT,
       text: projectData?.main_feature,
     },
     {
       title: 'URL',
-      mode: ProjectItemType.link,
+      mode: ProjectItemType.LINK,
       text: projectData?.url ? projectData?.url : '#',
     },
     {
       title: '깃허브',
-      mode: ProjectItemType.link,
+      mode: ProjectItemType.LINK,
       text: projectData?.github ? projectData?.github : '#',
     },
     {
       title: 'FrontEnd',
-      mode: ProjectItemType.tag,
+      mode: ProjectItemType.TAG,
       text: projectData?.front_tech,
     },
     {
       title: 'BackEnd',
-      mode: ProjectItemType.tag,
+      mode: ProjectItemType.TAG,
       text: projectData?.back_tech,
     },
   ];
   return (
-    <div>
+    <div className="flex flex-col w-2/5 h-full overflow-y-scroll">
       <span className="text-sm">{projectData?.duration}</span>
       <h1 className="text-3xl font-bold">{projectData?.title}</h1>
       <p className="mb-5 ">{projectData?.sub_detail}</p>
@@ -45,6 +45,13 @@ export default function ProjectDetailInfo({ projectData }: Props) {
           <ProjectInnerItem key={innerItem.title} title={innerItem.title} mode={innerItem.mode} text={innerItem.text} />
         ))}
       </section>
+
+      <button
+        type="button"
+        className="swiper-button-next-contribute self-end bg-white rounded-md px-3 py-1 mt-3 font-bold"
+      >
+        나의 기여도 보기
+      </button>
     </div>
   );
 }
