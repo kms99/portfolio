@@ -9,15 +9,4 @@ import Github from './github.svg';
 import Medal from './medal.svg';
 import Blog from './blog.svg';
 
-export {
-  Name,
-  Email,
-  Bootcamp,
-  Military,
-  School,
-  Intro,
-  Career,
-  Github,
-  Medal,
-  Blog,
-};
+export { Name, Email, Bootcamp, Military, School, Intro, Career, Github, Medal, Blog };

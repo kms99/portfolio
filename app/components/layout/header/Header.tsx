@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useRecoilState } from 'recoil';
 import { projectModalState } from '@/app/states/recoil/atoms';
-import { NAV_ITEMS } from './constants';
+import { NAV_ITEMS } from '../constants';
 import HeaderNavItem from './HeaderNavItem';
 import ProjectModal from '../../modal/projectModal/ProjectModal';
 
