@@ -37,10 +37,10 @@ export default function ProjectDetailInfo({ projectData }: Props) {
   ];
   return (
     <div>
-      <span>{projectData?.duration}</span>
-      <h1>{projectData?.title}</h1>
-      <p>{projectData?.sub_detail}</p>
-      <section>
+      <span className="text-sm">{projectData?.duration}</span>
+      <h1 className="text-3xl font-bold">{projectData?.title}</h1>
+      <p className="mb-5 ">{projectData?.sub_detail}</p>
+      <section className="border-y-4 border-black py-2">
         {innerSectionList.map(innerItem => (
           <ProjectInnerItem key={innerItem.title} title={innerItem.title} mode={innerItem.mode} text={innerItem.text} />
         ))}

@@ -18,14 +18,18 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
     switch (itemMode) {
       case ProjectItemType.link:
         if (typeof itemText === 'string') {
-          return <Link href={itemText}>{itemText}</Link>;
+          return (
+            <Link href={itemText} className="[&:hover]:underline" target="_blank" rel="noopener noreferrer">
+              {itemText}
+            </Link>
+          );
         }
         return <p />;
 
       case ProjectItemType.tag:
         if (typeof itemText === 'object') {
           return (
-            <div>
+            <div className="flex flex-wrap gap-y-2">
               {itemText.map(item => (
                 <ProjectTechTag key={item.tech_title} techText={item.tech_title} />
               ))}
@@ -36,14 +40,14 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
 
       default:
         if (typeof itemText === 'string') {
-          return <p>{itemText}</p>;
+          return <p className="whitespace-pre-wrap break-keep">{itemText}</p>;
         }
         return <p />;
     }
   };
   return (
-    <div>
-      <h2>{title}</h2>
+    <div className="py-2 [&+div]:border-t-2 [&+div]:border-slate-800 break-all w-30rem">
+      <h2 className="font-bold text-lg">{title}</h2>
       {currentMode(mode, text)}
     </div>
   );
