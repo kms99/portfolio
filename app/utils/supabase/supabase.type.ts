@@ -111,6 +111,32 @@ export type Database = {
         };
         Relationships: [];
       };
+      project_img: {
+        Row: {
+          id: string;
+          project_id: string;
+          url: string;
+        };
+        Insert: {
+          id?: string;
+          project_id?: string;
+          url: string;
+        };
+        Update: {
+          id?: string;
+          project_id?: string;
+          url?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'public_project_img_project_id_fkey';
+            columns: ['project_id'];
+            isOneToOne: false;
+            referencedRelation: 'project';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       trouble_shooting: {
         Row: {
           id: string;
@@ -138,7 +164,7 @@ export type Database = {
         };
         Relationships: [
           {
-            foreignKeyName: 'public_trouble_shooting_project_id_fkey';
+            foreignKeyName: 'public_truble_shooting_project_id_fkey';
             columns: ['project_id'];
             isOneToOne: false;
             referencedRelation: 'project';

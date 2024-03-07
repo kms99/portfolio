@@ -3,4 +3,10 @@ enum BookMode {
   'NEXT',
 }
 
-export { BookMode };
+enum ProjectItemType {
+  'link',
+  'text',
+  'tag',
+}
+
+export { BookMode, ProjectItemType };
