@@ -17,6 +17,7 @@ export default function ProjectSwiper({ imgList }: Props) {
         modules={[Navigation, Pagination, Mousewheel]}
         spaceBetween={0}
         slidesPerView={1}
+        slidesPerGroup={1}
         loop
         autoplay={false}
         navigation={{
@@ -25,23 +26,26 @@ export default function ProjectSwiper({ imgList }: Props) {
         }}
         mousewheel
         pagination={{
-          clickable: true,
+          el: '.swiper-pagination',
           type: 'fraction',
         }}
+        initialSlide={0}
         className="w-full h-full"
       >
-        {imgList?.map(imgInfo => (
-          <SwiperSlide key={imgInfo.id}>
-            <Image
-              src={imgInfo.url}
-              alt="sdf"
-              width={600}
-              height={300}
-              objectFit="cover"
-              className="w-full h-full object-cover"
-            />
-          </SwiperSlide>
-        ))}
+        {imgList?.map(imgInfo => {
+          return (
+            <SwiperSlide key={imgInfo.id}>
+              <Image
+                src={imgInfo.url}
+                alt="프로젝트 프리뷰"
+                width={600}
+                height={300}
+                style={{ objectFit: 'cover' }}
+                className="w-full h-full"
+              />
+            </SwiperSlide>
+          );
+        })}
 
         <div className="swiper-button-prev text-black" />
         <div className="swiper-button-next text-black" />

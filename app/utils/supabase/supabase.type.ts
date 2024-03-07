@@ -31,22 +31,22 @@ export type Database = {
       };
       contribute: {
         Row: {
-          title: string;
           context: string;
           id: string;
           project_id: string;
+          title: string;
         };
         Insert: {
-          title: string;
           context: string;
           id?: string;
           project_id?: string;
+          title: string;
         };
         Update: {
-          title?: string;
           context?: string;
           id?: string;
           project_id?: string;
+          title?: string;
         };
         Relationships: [
           {
@@ -84,12 +84,40 @@ export type Database = {
           },
         ];
       };
+      library: {
+        Row: {
+          id: string;
+          project_id: string;
+          tech_title: string;
+        };
+        Insert: {
+          id?: string;
+          project_id?: string;
+          tech_title: string;
+        };
+        Update: {
+          id?: string;
+          project_id?: string;
+          tech_title?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'public_library_project_id_fkey';
+            columns: ['project_id'];
+            isOneToOne: false;
+            referencedRelation: 'project';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       project: {
         Row: {
           duration: string;
           github: string;
+          headcount: string;
           id: string;
           main_feature: string;
+          role: string;
           sub_detail: string;
           title: string;
           url: string;
@@ -97,8 +125,10 @@ export type Database = {
         Insert: {
           duration: string;
           github: string;
+          headcount?: string;
           id?: string;
           main_feature: string;
+          role: string;
           sub_detail: string;
           title: string;
           url: string;
@@ -106,8 +136,10 @@ export type Database = {
         Update: {
           duration?: string;
           github?: string;
+          headcount?: string;
           id?: string;
           main_feature?: string;
+          role?: string;
           sub_detail?: string;
           title?: string;
           url?: string;

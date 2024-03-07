@@ -8,15 +8,16 @@
     "airbnb",
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [
-      1,
-      { "extensions": [".ts", ".tsx"] }
-    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
     "react/jsx-props-no-spreading": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
     "jsx-a11y/anchor-is-valid": "off",
     "import/prefer-default-export": "off",
     "import/extensions": [
@@ -33,18 +34,10 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       },
       "typescript": {}
     }
   },
-  "ignorePatterns": [
-    "next.config.js",
-    "postcss.config.js"
-  ]
+  "ignorePatterns": ["next.config.js", "postcss.config.js"]
 }

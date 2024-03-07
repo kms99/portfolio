@@ -31,6 +31,11 @@ export interface Contribute {
   title: string;
   context: string;
 }
+export interface Library {
+  id: string;
+  project_id: string;
+  tech_title: string;
+}
 
 export interface Project {
   id: string /* primary key */;
@@ -40,11 +45,14 @@ export interface Project {
   main_feature: string;
   url: string;
   github: string;
+  role: string;
+  headcount: string;
   front_tech?: Front_tech[];
   back_tech?: Back_tech[];
   contribute?: Contribute[];
   trouble_shooting?: Trouble_shooting[];
   project_img?: Project_img[];
+  library?: Library[];
 }
 
 export interface Join_Trouble_shooting extends Trouble_shooting {
@@ -64,5 +72,9 @@ export interface Join_Back_tech extends Back_tech {
 }
 
 export interface Join_Contribute extends Contribute {
+  project?: Project;
+}
+
+export interface Join_Library extends Library {
   project?: Project;
 }

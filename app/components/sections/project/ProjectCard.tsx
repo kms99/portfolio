@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: Props) {
         <figure className="w-30rem h-60 relative">
           <Image src={project.previewSrc} alt="dfs" className="mb-3 relative w-full h-full object-cover" />
         </figure>
-        <div className="w-full">
+        <div className="w-full flex flex-col items-start">
           <span className="text-sm text-gray-700 ">{project.duration}</span>
           <h2 className="text-xl font-bold">{project.title}</h2>
           <span className="text-base">{project.detail}</span>

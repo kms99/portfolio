@@ -6,7 +6,7 @@ export const getProjectInfo = async (projectTitle: string | null) => {
 
   const { data, error } = await supabase
     .from('project')
-    .select(`*, front_tech(*), back_tech(*), contribute(*), trouble_shooting(*), project_img(*)`)
+    .select(`*, front_tech(*), back_tech(*), contribute(*), trouble_shooting(*), project_img(*),library(*)`)
     .eq('title', projectTitle!)
     .single();
 

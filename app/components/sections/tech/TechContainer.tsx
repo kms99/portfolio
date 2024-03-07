@@ -19,9 +19,10 @@ function TechContainer({ title }: Props) {
           >
             <Image
               src={`/assets/tech/${tech}.png`}
-              height={50}
-              width={50}
+              width={40}
+              height={40}
               alt="tech image"
+              style={{ width: 'auto' }}
               className="justify-self-center mb-2"
             />
             <span className="text-sm font-bold">{tech}</span>

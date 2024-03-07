@@ -7,13 +7,13 @@ import ProjectTechTag from '../../common/ProjectTechTag';
 interface Props {
   title: string;
   mode: ProjectItemType;
-  text: string | Tables<'front_tech'>[] | Tables<'back_tech'>[] | undefined;
+  text: string | Tables<'front_tech'>[] | Tables<'back_tech'>[] | Tables<'library'>[] | undefined;
 }
 
 export default function ProjectInnerItem({ title, mode, text }: Props) {
   const currentMode = (
     itemMode: ProjectItemType,
-    itemText: string | Tables<'front_tech'>[] | Tables<'back_tech'>[] | undefined,
+    itemText: string | Tables<'front_tech'>[] | Tables<'back_tech'>[] | Tables<'library'>[] | undefined,
   ) => {
     switch (itemMode) {
       case ProjectItemType.LINK:

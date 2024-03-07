@@ -10,11 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        typing:
-          'typing 1.5s steps(7), blink 0.5s step-end infinite alternate',
+        typing: 'typing 1.5s steps(7), blink 0.5s step-end infinite alternate',
         flip: 'flip 1s ease-in-out forwards',
-        'flip-reverse':
-          'flipReverse 1s ease-in-out forwards',
+        'flip-reverse': 'flipReverse 1s ease-in-out forwards',
       },
 
       keyframes: {
@@ -27,23 +25,19 @@ const config: Config = {
 
         flip: {
           from: {
-            transform:
-              ' perspective(2500px) rotateY(0deg)',
+            transform: ' perspective(2500px) rotateY(0deg)',
           },
           to: {
-            transform:
-              ' perspective(2500px) rotateY(-180deg)',
+            transform: ' perspective(2500px) rotateY(-180deg)',
           },
         },
 
         flipReverse: {
           from: {
-            transform:
-              ' perspective(2500px) rotateY(-180deg)',
+            transform: ' perspective(2500px) rotateY(-180deg)',
           },
           to: {
-            transform:
-              ' perspective(2500px) rotateY(deg)',
+            transform: ' perspective(2500px) rotateY(deg)',
           },
         },
       },
@@ -66,12 +60,9 @@ const config: Config = {
       },
 
       boxShadow: {
-        headerShadow:
-          'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px',
-        AboutCardShadow:
-          '5px 0px 8px -3px #555555',
-        ProfileImageShadow:
-          'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;',
+        headerShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px',
+        AboutCardShadow: '5px 0px 8px -3px #555555',
+        ProfileImageShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
       },
       transitionProperty: {
         z: 'z-index',
