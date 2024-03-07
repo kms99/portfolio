@@ -4,14 +4,15 @@ export const Tech: Record<string, Array<string>> = {
   Frontend: [
     'HTML',
     'CSS',
-    'styled-components',
     'tailwind',
     'JavaScript',
     'TypeScript',
     'React',
+    'styled-components',
     'Next.js',
-    'zustand',
     'redux(toolkit)',
+    'zustand',
+    'recoil',
     'react-query',
   ],
 };

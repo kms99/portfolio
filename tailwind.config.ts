@@ -61,7 +61,7 @@ const config: Config = {
 
       boxShadow: {
         headerShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px',
-        AboutCardShadow: '5px 0px 8px -3px #555555',
+        AboutCardShadow: '5px 0px 8px -1px #555555',
         ProfileImageShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
       },
       transitionProperty: {
