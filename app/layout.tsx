@@ -39,6 +39,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="description" content="어서오세요. 웹 프론트엔드 개발자 김명섭입니다." />
         <meta name="keywords" content="웹프론트엔드, 포트폴리오, 웹개발자, 프론트엔드" />
         <meta name="author" content="Kim MyungSUb" />
+        <meta property="og:title" content="FE 김명섭 포트폴리오" />
+        <meta property="og:description" content="어서오세요. 웹 프론트엔드 개발자 김명섭입니다." />
+        <meta
+          property="og:image"
+          content="https://jeaukpjgukscmujtxqot.supabase.co/storage/v1/object/public/seo/seo.png"
+        />
+        <meta property="og:url" content="https://www.kimmyungsub-portfolio.com/" />
       </Head>
       <body>
         <TanstackQueryWrapper>
