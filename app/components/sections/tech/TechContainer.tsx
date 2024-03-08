@@ -14,18 +14,18 @@ function TechContainer({ title }: Props) {
       <ul className="h-full  px-5 py-3 grid grid-cols-5 gap-2 bg-gray-300 rounded-lg transition-all w-full">
         {Tech[title].map(tech => (
           <li
-            key={tech}
+            key={tech.title}
             className="[&:hover]:bg-gray-600 [&:hover]:text-white py-3 flex flex-col items-center px-1 justify-end h-full"
           >
             <Image
-              src={`/assets/tech/${tech}.png`}
+              src={tech.img}
               width={40}
               height={40}
-              alt="tech image"
+              alt={`${tech.title}image`}
               style={{ width: 'auto' }}
               className="justify-self-center mb-2"
             />
-            <span className="text-sm font-bold">{tech}</span>
+            <span className="text-sm font-bold">{tech.title}</span>
           </li>
         ))}
       </ul>
