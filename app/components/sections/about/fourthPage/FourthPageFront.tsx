@@ -11,19 +11,20 @@ export default function FourthPageFront() {
       <>
         {section.contexts.map(context => (
           <section key={context.details} className="flex flex-col">
-            <span className="text-sm text-gray-500">{context.duration}</span>
+            <span className="text-sm text-gray-500 font-sub">{context.duration}</span>
             {context.link ? (
               <Link
                 href={context.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 font-base tracking-tight border-b-1 border-transparent [&:hover]:border-black w-fit"
+                data-type="link"
+                className="flex items-center font-bold font-sub gap-2 font-base border-b-1 border-transparent [&:hover]:border-black w-fit"
               >
                 <LinkClip />
                 {context.details}
               </Link>
             ) : (
-              <span className="text-base">{context.details}</span>
+              <span className="text-base font-bold font-sub">{context.details}</span>
             )}
           </section>
         ))}

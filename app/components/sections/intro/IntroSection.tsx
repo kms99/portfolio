@@ -17,7 +17,7 @@ export default function IntroSection() {
       onViewportEnter={() => {
         handleCheckViewPort(true);
       }}
-      className="h-screen flex justify-center items-center bg-i relative mb-1"
+      className="min-h-screen h-auto flex justify-center items-center bg-i relative mb-1"
     >
       <SearchBox checkViewPort={checkViewPort} />
       <DownBounce />

@@ -22,7 +22,7 @@ export default function AboutSection() {
   };
 
   return (
-    <div id="about" className={`h-screen flex flex-col items-center relative `}>
+    <div id="about" className={`min-h-screen h-auto flex flex-col items-center relative `}>
       <SubTitle>소개</SubTitle>
       <div
         className={`w-30rem h-40rem relative z-0 transition-all duration-1000 ease-in-out font-main ${

@@ -9,10 +9,14 @@ import Footer from './components/layout/footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const bkk = localFont({
-  src: './font/부크크명조_얇은글씨.ttf',
+const pretendard = localFont({
+  src: [
+    { path: './font/Pretendard-Bold.ttf', style: 'bold' },
+    { path: './font/Pretendard-Medium.ttf', style: 'light' },
+    { path: './font/Pretendard-Light.ttf', style: 'medium' },
+  ],
   display: 'swap',
-  variable: '--font-bkk',
+  variable: '--font-pretendard',
 });
 
 const sb = localFont({
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className={`${inter.className} ${bkk.variable} ${sb.variable} ${patua.variable}`}>
+    <html lang="ko" className={`${inter.className} ${pretendard.variable} ${sb.variable} ${patua.variable}`}>
       <body>
         <TanstackQueryWrapper>
           <RecoilRootWrapper>

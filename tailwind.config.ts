@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sub: ['var(--font-bkk)', 'var(--font-patua)', 'serif'],
+        sub: ['var(--font-pretendard)', 'var(--font-patua)', 'serif'],
         main: ['var(--font-sb)', 'var(--font-patua)', 'sans-serif'],
       },
       animation: {
@@ -67,6 +67,7 @@ const config: Config = {
         headerShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px',
         AboutCardShadow: '5px 0px 8px -1px #555555',
         ProfileImageShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
+        ProjectCardShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
       },
       transitionProperty: {
         z: 'z-index',
