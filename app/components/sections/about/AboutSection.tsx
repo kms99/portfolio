@@ -25,7 +25,7 @@ export default function AboutSection() {
     <div id="about" className={`h-screen flex flex-col items-center relative `}>
       <SubTitle>소개</SubTitle>
       <div
-        className={`w-30rem h-40rem relative z-0 transition-all duration-1000 ease-in-out ${
+        className={`w-30rem h-40rem relative z-0 transition-all duration-1000 ease-in-out font-main ${
           currentPage ? 'translate-x-1/2' : 'translate-x-0'
         } ${checkClick && 'pointer-events-none'} `}
         onClick={handleCheckClick}

@@ -9,7 +9,7 @@ interface Props {
 
 export default function IntroSearchBox({ checkViewPort }: Props) {
   return (
-    <div className="border-black border-4 w-12em text-5xl py-6 px-4 relative">
+    <div className="border-black border-4 w-12em text-5xl py-6 px-4 relative font-bold">
       <h2
         className={`font-bold w-7em ${
           checkViewPort && 'animate-typing'

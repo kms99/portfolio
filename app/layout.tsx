@@ -1,12 +1,31 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import localFont from 'next/font/local';
 import Header from './components/layout/header/Header';
 import RecoilRootWrapper from './states/recoil/RecoilRootWrapper';
 import TanstackQueryWrapper from './states/tanstackQuery/TanstackQueryWrapper';
 import Footer from './components/layout/footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
+
+const bkk = localFont({
+  src: './font/부크크명조_얇은글씨.ttf',
+  display: 'swap',
+  variable: '--font-bkk',
+});
+
+const sb = localFont({
+  src: [
+    { path: './font/SB 어그로 B.ttf', style: 'bold' },
+    { path: './font/SB 어그로 L.ttf', style: 'light' },
+    { path: './font/SB 어그로 M.ttf', style: 'medium' },
+  ],
+  display: 'swap',
+  variable: '--font-sb',
+});
+
+const patua = localFont({ src: './font/PatuaOne-Regular.ttf', display: 'swap', variable: '--font-patua' });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +34,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko">
-      <body className={inter.className}>
+    <html lang="ko" className={`${inter.className} ${bkk.variable} ${sb.variable} ${patua.variable}`}>
+      <body>
         <TanstackQueryWrapper>
           <RecoilRootWrapper>
             <Header />

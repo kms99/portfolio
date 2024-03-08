@@ -30,7 +30,7 @@ export default function ProjectSwiper({ imgList }: Props) {
           type: 'fraction',
         }}
         initialSlide={0}
-        className="w-full h-full"
+        className="w-full h-80"
       >
         {imgList?.map(imgInfo => {
           return (
@@ -40,7 +40,7 @@ export default function ProjectSwiper({ imgList }: Props) {
                 alt="프로젝트 프리뷰"
                 width={600}
                 height={300}
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', objectPosition: 'top' }}
                 className="w-full h-full"
               />
             </SwiperSlide>
@@ -49,9 +49,8 @@ export default function ProjectSwiper({ imgList }: Props) {
 
         <div className="swiper-button-prev text-black" />
         <div className="swiper-button-next text-black" />
-
-        <div className="swiper-pagination mt-10 relative" />
       </Swiper>
+      <div className="swiper-pagination mt-5 relative" />
     </div>
   );
 }

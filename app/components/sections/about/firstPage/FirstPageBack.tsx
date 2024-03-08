@@ -1,24 +1,20 @@
-import { BookMode } from '@/app/types/enums';
 import React from 'react';
 import Image from 'next/image';
-import profile from '@/public/assets/about/profileImg.jpg';
-import AboutPageSideDiv from '../AboutPageSideDiv';
+import { developer } from '@/public/assets/about';
+import AboutPageBack from '../AboutPageBack';
 
 export default function FirstPageBack() {
   return (
-    <AboutPageSideDiv
-      $style="top-0 left-0 w-full h-full  absolute flip z-10 bg-white border-r-2 flex flex-col items-center bg-gray-200"
-      mode={BookMode.PREV}
-    >
-      <span className="mt-24 font-bold">첫번째 장</span>
-      <h3 className="mt-16 text-3xl font-bold border-b-4 border-black">어떤 개발자</h3>
+    <AboutPageBack countTitle="첫번째장" title="어떤 개발자" detail="개발자로서 추구하는 방향성을 이야기합니다.">
       <Image
-        src={profile}
-        // width={250}
-        height={250}
+        src={developer}
+        width={250}
         alt="user default"
-        className="absolute left-1/2 bottom-16 -translate-x-1/2 rotate-3 shadow-ProfileImageShadow"
+        className="absolute left-1/2 bottom-44 -translate-x-1/2 shadow-ProfileImageShadow z-10"
       />
-    </AboutPageSideDiv>
+      <span className="-rotate-45 absolute -right-20 bottom-20 text-6xl whitespace-nowrap text-gray-400">
+        DEVELOPER
+      </span>
+    </AboutPageBack>
   );
 }

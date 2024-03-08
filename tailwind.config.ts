@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sub: ['var(--font-bkk)', 'var(--font-patua)', 'serif'],
+        main: ['var(--font-sb)', 'var(--font-patua)', 'sans-serif'],
+      },
       animation: {
         typing: 'typing 1.5s steps(7), blink 0.5s step-end infinite alternate',
         flip: 'flip 1s ease-in-out forwards',
@@ -69,6 +73,9 @@ const config: Config = {
       },
       transitionDelay: {
         2000: '2s',
+      },
+      borderWidth: {
+        1: '1px',
       },
     },
   },

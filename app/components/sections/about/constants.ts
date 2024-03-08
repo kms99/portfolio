@@ -1,4 +1,4 @@
-import { Blog, Bootcamp, Email, Github, Medal, Military, Name, School } from '@/public/assets/about';
+import { Blog, Bootcamp, Cake, Email, Github, Location, Medal, Military, Name, School } from '@/public/assets/about';
 import { AboutInfoItem, AboutCareerItem } from './about.type';
 
 export const MY_INFO: AboutInfoItem[] = [
@@ -6,6 +6,16 @@ export const MY_INFO: AboutInfoItem[] = [
     title: '이름',
     titleIcon: Name,
     contexts: '김명섭',
+  },
+  {
+    title: '생년월일',
+    titleIcon: Cake,
+    contexts: '1999.02.23',
+  },
+  {
+    title: '주소지',
+    titleIcon: Location,
+    contexts: '경기도 화성시',
   },
   {
     title: '이메일',

@@ -6,10 +6,10 @@ export default function SecondPageFront() {
   return (
     <AboutPageSideDiv
       mode={BookMode.NEXT}
-      $style="flex flex-col justify-center whitespace-pre-wrap break-all top-0 left-0 w-full h-full absolute z-20 px-10 shadow-AboutCardShadow bg-white "
+      $style="flex flex-col justify-center whitespace-pre-wrap break-all top-0 left-0 w-full h-full absolute z-20 px-10 shadow-AboutCardShadow bg-white"
     >
-      <h3 className=" text-3xl mt-8 mb-8 font-bold border-b-4 inline-block w-fit">정진하는 개발자</h3>
-      <p className="text-base whitespace-pre-wrap tracking-wider leading-8 [&>span]:font-bold [&>span]:text-xl [&>span]:border-b-4">
+      <h3 className=" text-3xl mt-5 mb-8 inline-block w-fit font-bold">정진하는 개발자</h3>
+      <p className="text-base whitespace-pre-wrap tracking-wider leading-8 [&>span]:font-bold [&>span]:text-xl ">
         웹 프론트엔드(FE) 개발자 <span>김명섭</span> 입니다.
         <br />
         <br />

@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="mt-10 w-full h-52 flex flex-col items-center justify-center">
+    <footer className="mt-10 w-full h-52 flex flex-col items-center justify-center font-main font-light text-gray-400">
       <div>
         <ul className="flex gap-10">
           <li>
@@ -19,8 +19,8 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col items-center mt-5 text-sm">
-        <span>E-mail: audtjq213@gmail.com</span>
+      <div className="flex flex-col items-center mt-8 text-sm">
+        <span className="mb-2">E-mail: audtjq213@gmail.com</span>
         <span>Copyright © 2024. Kim MyungSub. All rights reserved.</span>
       </div>
     </footer>

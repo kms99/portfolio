@@ -8,5 +8,32 @@ import Career from './career.svg';
 import Github from './github.svg';
 import Medal from './medal.svg';
 import Blog from './blog.svg';
+import LinkClip from './link.svg';
+import Cake from './cake.svg';
+import Location from './location.svg';
+import army from './army.png';
+import nbc from './nbc.webp';
+import sangmyung from './sangmyung.png';
+import developer from './developer.jpg';
+import profile from './profileImg.jpg';
 
-export { Name, Email, Bootcamp, Military, School, Intro, Career, Github, Medal, Blog };
+export {
+  Name,
+  Email,
+  Bootcamp,
+  Military,
+  School,
+  Intro,
+  Career,
+  Github,
+  Medal,
+  Blog,
+  LinkClip,
+  Cake,
+  Location,
+  army,
+  nbc,
+  sangmyung,
+  developer,
+  profile,
+};

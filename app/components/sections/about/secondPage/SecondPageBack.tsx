@@ -1,17 +1,18 @@
-import { BookMode } from '@/app/types/enums';
 import React from 'react';
-import { Intro } from '@/public/assets/about';
-import AboutPageSideDiv from '../AboutPageSideDiv';
+import Image from 'next/image';
+import { profile } from '@/public/assets/about';
+import AboutPageBack from '../AboutPageBack';
 
 export default function SecondPageBack() {
   return (
-    <AboutPageSideDiv
-      mode={BookMode.PREV}
-      $style="top-0 left-0 w-full h-full  absolute flip z-10 bg-white border-r-2 flex flex-col items-center bg-gray-200"
-    >
-      <span className="mt-24 font-bold">두번째 장</span>
-      <h3 className="mt-16 text-3xl font-bold border-b-4 border-black mb-28">나의 정보</h3>
-      <Intro />
-    </AboutPageSideDiv>
+    <AboutPageBack countTitle="두번째장" title="나의 정보" detail="기본 정보 알아봅니다.">
+      <Image
+        src={profile}
+        height={250}
+        alt="user default"
+        className="absolute left-1/2 bottom-28 -translate-x-1/2 rotate-3 shadow-ProfileImageShadow z-10"
+      />
+      <span className="-rotate-45 absolute -right-12 bottom-24 text-6xl text-gray-400">MY INFO</span>
+    </AboutPageBack>
   );
 }
