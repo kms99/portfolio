@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import localFont from 'next/font/local';
+import Head from 'next/head';
 import Header from './components/layout/header/Header';
 import RecoilRootWrapper from './states/recoil/RecoilRootWrapper';
 import TanstackQueryWrapper from './states/tanstackQuery/TanstackQueryWrapper';
@@ -31,14 +31,15 @@ const sb = localFont({
 
 const patua = localFont({ src: './font/PatuaOne-Regular.ttf', display: 'swap', variable: '--font-patua' });
 
-export const metadata: Metadata = {
-  title: 'FE 김명섭 포트폴리오',
-  description: '어서오세요. 웹 프론트엔드 개발자 김명섭입니다.',
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className={`${inter.className} ${pretendard.variable} ${sb.variable} ${patua.variable}`}>
+      <Head>
+        <title>FE 김명섭 포트폴리오</title>
+        <meta name="description" content="어서오세요. 웹 프론트엔드 개발자 김명섭입니다." />
+        <meta name="keywords" content="웹프론트엔드, 포트폴리오, 웹개발자, 프론트엔드" />
+        <meta name="author" content="Kim MyungSUb" />
+      </Head>
       <body>
         <TanstackQueryWrapper>
           <RecoilRootWrapper>
