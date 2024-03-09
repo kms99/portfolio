@@ -6,6 +6,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { ProjectDetailType } from '@/app/types/enums';
+import { Close } from '@/public/assets/project';
 import ProjectSwiper from './ProjectSwiper';
 import ProjectInfo from './ProjectInfo';
 import 'swiper/css';
@@ -13,13 +14,22 @@ import 'swiper/css/navigation';
 import ProjectDetailList from './ProjectDetailList';
 
 export default function ProjectModalInner() {
-  const { projectState } = useModal();
+  const { projectState, closeProject } = useModal();
 
   const { data } = useProject(projectState.selectProject!);
 
   // TODO: 컴포넌트 분리
   return (
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-300 cursor-default w-3/5 h-3/4 p-4 box-content">
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-300 cursor-default w-3/5 h-3/4 p-6 box-content">
+      <button
+        type="button"
+        aria-label="모달 닫기"
+        onClick={closeProject}
+        className="absolute top-5 right-5 cursor-pointer  p-2 z-20"
+      >
+        <Close />
+      </button>
+
       <Swiper
         modules={[Navigation]}
         spaceBetween={0}

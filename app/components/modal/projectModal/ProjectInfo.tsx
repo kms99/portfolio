@@ -42,17 +42,16 @@ export default function ProjectDetailInfo({ projectData }: Props) {
   ];
   return (
     <div className="flex flex-col w-2/5 h-full overflow-y-scroll">
-      <button
-        type="button"
-        className="swiper-button-next-contribute self-end bg-white rounded-md px-3 py-1 mt-3 font-bold"
-      >
-        나의 기여도 보기
-      </button>
       <span className="text-sm">{projectData?.duration}</span>
 
-      <div className="flex items-end">
-        <h1 className="text-3xl font-bold mr-2">{projectData?.title}</h1>
-        <span className="text-xl">({projectData?.headcount})</span>
+      <div className="flex justify-between mb-2">
+        <div className="flex items-end">
+          <h1 className="text-3xl font-bold mr-2">{projectData?.title}</h1>
+          <span className="text-xl">({projectData?.headcount})</span>
+        </div>
+        <button type="button" className="swiper-button-next-contribute bg-white rounded-md px-3 py-1 font-bold">
+          나의 기여도 보기
+        </button>
       </div>
       <p className="mb-5">{projectData?.sub_detail}</p>
       <section className="border-y-4 border-black py-2">
