@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useBookContext } from '@/app/contexts/bookContext';
+import useBook from '@/app/hooks/useBook';
 import SecondPageFront from './SecondPageFront';
 import SecondPageBack from './SecondPageBack';
 
 function AboutSecondPage() {
-  const { currentPage } = useBookContext();
+  const { page: currentPage } = useBook();
 
   const [isActive, setIsActive] = useState<boolean>(false);
 

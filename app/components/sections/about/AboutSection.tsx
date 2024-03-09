@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useBookContext } from '@/app/contexts/bookContext';
+import useBook from '@/app/hooks/useBook';
 import SubTitle from '../../common/SubTitle';
 import AboutFirstPage from './firstPage/AboutFirstPage';
 import AboutSecondPage from './secondPage/AboutSecondPage';
@@ -7,7 +7,7 @@ import AboutThirdPage from './thirdPage/AboutThirdPage';
 import AboutFourthPage from './fourthPage/AboutFourthPage';
 
 export default function AboutSection() {
-  const { currentPage } = useBookContext();
+  const { page: currentPage } = useBook();
 
   const [checkClick, setCheckClick] = useState<boolean>(false);
 

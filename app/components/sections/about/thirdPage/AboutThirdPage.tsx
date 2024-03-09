@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-
-import { useBookContext } from '@/app/contexts/bookContext';
+import useBook from '@/app/hooks/useBook';
 import ThirdPageFront from './ThirdPageFront';
 import ThirdPageBack from './ThirdPageBack';
 
 export default function AboutThirdPage() {
-  const { currentPage } = useBookContext();
+  const { page: currentPage } = useBook();
 
   const [isActive, setIsActive] = useState<boolean>(false);
 

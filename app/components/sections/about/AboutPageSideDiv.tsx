@@ -1,4 +1,4 @@
-import { useBookContext } from '@/app/contexts/bookContext';
+import useBook from '@/app/hooks/useBook';
 import { BookMode } from '@/app/types/enums';
 import React, { PropsWithChildren } from 'react';
 
@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function AboutPageSideDiv({ children, $style, mode }: PropsWithChildren<Props>) {
-  const { changePage } = useBookContext();
+  const { changePage } = useBook();
 
   const handleChangePage = (e: React.KeyboardEvent<HTMLDivElement> | React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
@@ -16,6 +16,7 @@ export default function AboutPageSideDiv({ children, $style, mode }: PropsWithCh
     // [how]: link 태그에만 dataset을 주어 link가 클릭 되었다는 것을 알림
     // [fix]: 이벤트 버블링 시 dataset을 통해 링크가 클릭되면 이벤트 실행 x
     if (target.dataset.type === 'link') return;
+
     changePage(mode);
   };
 
