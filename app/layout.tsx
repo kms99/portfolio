@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   description: '어서오세요. 웹 프론트엔드 개발자 김명섭입니다.',
   authors: [{ name: 'Kim MyungSub', url: 'https://kimmyungsub-portfolio.com' }],
   keywords: '웹프론트엔드, 포트폴리오, 웹개발자, 프론트엔드',
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     images: 'https://jeaukpjgukscmujtxqot.supabase.co/storage/v1/object/public/seo/seo.png',
     type: 'website',
