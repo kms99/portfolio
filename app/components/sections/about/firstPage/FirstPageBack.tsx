@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { developer } from '@/public/assets/about';
+import { BookMode } from '@/app/types/enums';
 import AboutPageBack from '../AboutPageBack';
+import PageNav from '../PageNav';
 
 export default function FirstPageBack() {
   return (
@@ -15,6 +17,7 @@ export default function FirstPageBack() {
       <span className="-rotate-45 absolute -right-20 bottom-20 text-6xl whitespace-nowrap text-gray-400">
         DEVELOPER
       </span>
+      <PageNav mode={BookMode.PREV} />
     </AboutPageBack>
   );
 }

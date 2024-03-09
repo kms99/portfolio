@@ -75,12 +75,12 @@ export const MY_CAREER: AboutCareerItem[] = [
       {
         duration: '2024.02',
         details: '내일배움캠프 웹트랙 3기(React) 최종프로젝트 최우수상',
-        link: 'https://drive.google.com/file/d/1zAPTuTxliH7Qp2BbovWl_3AZ5-dX--eR/view?usp=drive_link',
+        link: 'https://jeaukpjgukscmujtxqot.supabase.co/storage/v1/object/public/award/final_project_winner.png?t=2024-03-09T13%3A04%3A05.301Z',
       },
       {
         duration: '2024.01',
         details: '2024 내일배움캠프 JavaScript 타임어택 해커톤 우수상',
-        link: 'https://drive.google.com/file/d/1cILIug4in192ig797QpICcnvysqQMbvr/view?usp=drive_link',
+        link: 'https://jeaukpjgukscmujtxqot.supabase.co/storage/v1/object/public/award/time_attack_hackerton.png?t=2024-03-09T13%3A04%3A35.738Z',
       },
     ],
   },

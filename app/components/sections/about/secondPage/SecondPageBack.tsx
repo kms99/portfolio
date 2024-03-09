@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { profile } from '@/public/assets/about';
+import { BookMode } from '@/app/types/enums';
 import AboutPageBack from '../AboutPageBack';
+import PageNav from '../PageNav';
 
 export default function SecondPageBack() {
   return (
@@ -13,6 +15,8 @@ export default function SecondPageBack() {
         className="absolute left-1/2 bottom-28 -translate-x-1/2 rotate-3 shadow-ProfileImageShadow z-10"
       />
       <span className="-rotate-45 absolute -right-12 bottom-24 text-6xl text-gray-400">MY INFO</span>
+
+      <PageNav mode={BookMode.PREV} />
     </AboutPageBack>
   );
 }

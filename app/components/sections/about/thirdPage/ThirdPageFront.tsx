@@ -6,6 +6,7 @@ import { AboutInfoItem } from '../about.type';
 import { MY_INFO } from '../constants';
 import AboutInnerCard from '../AboutInnerCard';
 import AboutPageSideDiv from '../AboutPageSideDiv';
+import PageNav from '../PageNav';
 
 export default function ThirdPageFront() {
   const renderContext = (section: AboutInfoItem) => {
@@ -40,6 +41,8 @@ export default function ThirdPageFront() {
       $style="flex items-center top-0 left-0 w-full h-full absolute z-20 shadow-AboutCardShadow bg-white"
     >
       <div className=" flex flex-col justify-center px-6 bg-white rounded-lg w-full gap-5">{CARD_ITEMS}</div>
+
+      <PageNav mode={BookMode.NEXT} />
     </AboutPageSideDiv>
   );
 }

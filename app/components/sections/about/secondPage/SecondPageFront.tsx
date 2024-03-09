@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookMode } from '@/app/types/enums';
 import AboutPageSideDiv from '../AboutPageSideDiv';
+import PageNav from '../PageNav';
 
 export default function SecondPageFront() {
   return (
@@ -23,6 +24,8 @@ export default function SecondPageFront() {
         <span>주도적으로 목표를 설정</span> 하며,
         <br />그 목표를 달성하기 위해 매일 <span>정진</span> 합니다.
       </p>
+
+      <PageNav mode={BookMode.NEXT} />
     </AboutPageSideDiv>
   );
 }

@@ -16,6 +16,7 @@ import nbc from './nbc.webp';
 import sangmyung from './sangmyung.png';
 import developer from './developer.jpg';
 import profile from './profileImg.jpg';
+import PageBtn from './pageButton.svg';
 
 export {
   Name,
@@ -36,4 +37,5 @@ export {
   sangmyung,
   developer,
   profile,
+  PageBtn,
 };
