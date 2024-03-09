@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   description: '어서오세요. 웹 프론트엔드 개발자 김명섭입니다.',
   authors: [{ name: 'Kim MyungSub', url: 'https://kimmyungsub-portfolio.com' }],
   keywords: '웹프론트엔드, 포트폴리오, 웹개발자, 프론트엔드',
+  metadataBase: new URL('https://kimmyungsub-portfolio.com'),
   icons: {
     icon: '/favicon.ico',
   },
@@ -44,8 +45,14 @@ export const metadata: Metadata = {
     title: 'FE 김명섭 포트폴리오',
     description: '어서오세요. 웹 프론트엔드 개발자 김명섭입니다.',
   },
+  twitter: {
+    title: 'FE 김명섭 포트폴리오',
+    images: 'https://jeaukpjgukscmujtxqot.supabase.co/storage/v1/object/public/seo/seo.png',
+    card: 'summary',
+    description: '어서오세요. 웹 프론트엔드 개발자 김명섭입니다.',
+    site: 'https://kimmyungsub-portfolio.com',
+  },
 };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className={`${pretendard.variable} ${sb.variable} ${patua.variable}`}>
