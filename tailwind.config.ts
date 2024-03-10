@@ -48,6 +48,7 @@ const config: Config = {
 
       colors: {
         headerColor: 'rgba(255,255,255,0.5)',
+        backdrop: 'rgba(0,0,0,0.5)',
       },
 
       spacing: {

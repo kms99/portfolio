@@ -19,7 +19,12 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
       case ProjectItemType.LINK:
         if (typeof itemText === 'string') {
           return (
-            <Link href={itemText} className="[&:hover]:underline" target="_blank" rel="noopener noreferrer">
+            <Link
+              href={itemText}
+              className="[&:hover]:underline  font-sub font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {itemText}
             </Link>
           );
@@ -29,7 +34,7 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
       case ProjectItemType.TAG:
         if (typeof itemText === 'object') {
           return (
-            <div className="flex flex-wrap gap-y-2">
+            <div className="flex flex-wrap gap-y-2  font-sub font-bold">
               {itemText.map(item => (
                 <ProjectTechTag key={item.tech_title} techText={item.tech_title} />
               ))}
@@ -40,7 +45,7 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
 
       default:
         if (typeof itemText === 'string') {
-          return <p className="whitespace-pre-wrap break-keep">{itemText}</p>;
+          return <p className="whitespace-pre-wrap break-keep  font-sub font-bold">{itemText}</p>;
         }
         return <p />;
     }

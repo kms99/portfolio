@@ -8,7 +8,7 @@ export default function Backdrop({ children }: PropsWithChildren) {
   };
   return (
     <div
-      className="z-50 fixed left-0 top-0 w-screen h-screen backdrop-blur-sm"
+      className="z-50 fixed left-0 top-0 w-screen h-screen bg-backdrop backdrop-blur-sm "
       role="button"
       onClick={handleCloseProjectModal}
       onKeyDown={e => {

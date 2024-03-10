@@ -12,7 +12,7 @@ interface Props {
 }
 export default function ProjectSwiper({ imgList }: Props) {
   return (
-    <div className="w-3/5">
+    <div className="w-3/5 relative">
       <Swiper
         modules={[Navigation, Pagination, Mousewheel]}
         spaceBetween={0}
@@ -30,7 +30,7 @@ export default function ProjectSwiper({ imgList }: Props) {
           type: 'fraction',
         }}
         initialSlide={0}
-        className="w-full h-80"
+        className="w-full h-80 border-1"
       >
         {imgList?.map(imgInfo => {
           return (
@@ -46,11 +46,13 @@ export default function ProjectSwiper({ imgList }: Props) {
             </SwiperSlide>
           );
         })}
-
-        <div className="swiper-button-prev text-black" />
-        <div className="swiper-button-next text-black" />
       </Swiper>
-      <div className="swiper-pagination mt-5 relative" />
+
+      <div className="mt-5 relative flex justify-center">
+        <div className="swiper-button-prev text-black scale-50" />
+        <div className="swiper-pagination relative top-0 font-main z-0" />
+        <div className="swiper-button-next text-black scale-50 " />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { Search } from '@/public/assets/intro';
-import Link from 'next/link';
 import React from 'react';
 import { ONE_LINE_NAME } from './constants';
 
@@ -8,6 +7,14 @@ interface Props {
 }
 
 export default function IntroSearchBox({ checkViewPort }: Props) {
+  const scrollToElement = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="border-black border-4 w-12em text-5xl py-6 px-4 relative font-bold">
       <h2
@@ -17,9 +24,14 @@ export default function IntroSearchBox({ checkViewPort }: Props) {
       >
         {ONE_LINE_NAME}
       </h2>
-      <Link className="absolute right-8 top-1/2 -translate-y-1/2" href="#about">
+      <a
+        onClick={e => scrollToElement(e, 'about')}
+        className="absolute right-8 top-1/2 -translate-y-1/2"
+        href="#about"
+        aria-label="소개 섹션으로 이동"
+      >
         <Search />
-      </Link>
+      </a>
     </div>
   );
 }

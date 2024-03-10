@@ -11,19 +11,19 @@ interface Props {
 export default function ProjectDetailList({ data, mode }: Props) {
   return (
     <div className="my-10">
-      <h2 className="text-2xl font-bold">{mode ? '트러블 슈팅 및 개선' : '주요 구현사항'}</h2>
+      <h2 className="text-2xl font-bold mb-5">{mode ? '트러블 슈팅 및 개선' : '주요 구현사항'}</h2>
       <ul>
         {data?.map(troubleData => (
           <ProjectDetailItem key={troubleData.id}>
-            <h2 className="font-bold text-xl">{troubleData.title}</h2>
+            <h2 className="font-bold text-lg">{troubleData.title}</h2>
             {'problem' in troubleData ? (
               <>
-                <p>{troubleData.problem}</p>
-                <p>{troubleData.process}</p>
-                <p>{troubleData.result}</p>
+                <p className=" font-sub font-bold">{troubleData.problem}</p>
+                <p className=" font-sub font-bold">{troubleData.process}</p>
+                <p className=" font-sub font-bold">{troubleData.result}</p>
               </>
             ) : (
-              <p>{troubleData.context}</p>
+              <p className=" font-sub font-bold">{troubleData.context}</p>
             )}
           </ProjectDetailItem>
         ))}
