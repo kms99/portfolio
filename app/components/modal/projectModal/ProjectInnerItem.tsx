@@ -34,7 +34,7 @@ export default function ProjectInnerItem({ title, mode, text }: Props) {
       case ProjectItemType.TAG:
         if (typeof itemText === 'object') {
           return (
-            <div className="flex flex-wrap gap-y-2  font-sub font-bold">
+            <div className="flex flex-wrap gap-1  font-sub font-bold">
               {itemText.map(item => (
                 <ProjectTechTag key={item.tech_title} techText={item.tech_title} />
               ))}

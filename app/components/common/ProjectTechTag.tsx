@@ -5,8 +5,6 @@ interface Props {
 }
 export default function ProjectTechTag({ techText }: Props) {
   return (
-    <span className="bg-gray-200 mr-2 text-sm rounded-full px-2 py-1 whitespace-nowrap font-sub font-bold">
-      {techText}
-    </span>
+    <span className="bg-gray-200 text-sm rounded-full px-2 py-1 whitespace-nowrap font-sub font-bold">{techText}</span>
   );
 }

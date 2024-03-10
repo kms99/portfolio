@@ -7,7 +7,7 @@ export default function ProjectSection() {
   return (
     <section className="min-h-screen h-auto flex flex-col items-center relative" id="project">
       <SubTitle>프로젝트</SubTitle>
-      <ul className="grid grid-cols-3 justify-items-center gap-8">
+      <ul className="grid desktop:grid-cols-4 tablet:grid-cols-2 grid-cols-1 justify-items-center gap-5">
         {PROJECT_LISTS.map(project => (
           <ProjectCard key={project.title} project={project} />
         ))}

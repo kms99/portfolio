@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        mobile: '400px',
+        tablet: '700px',
+        laptop: '1024px',
+        desktop: '1280px',
+      },
       fontFamily: {
         sub: ['var(--font-pretendard)', 'var(--font-patua)', 'serif'],
         main: ['var(--font-sb)', 'var(--font-patua)', 'sans-serif'],
@@ -54,7 +60,9 @@ const config: Config = {
       spacing: {
         mainH: '179.4375rem',
         '7em': '7em',
+        '10em': '10em',
         '12em': '12em',
+        '20rem': '20rem',
         '30rem': '30rem',
         '40rem': '40rem',
         '0.9rem': '0.9rem',

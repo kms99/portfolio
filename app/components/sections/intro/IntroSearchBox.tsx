@@ -16,9 +16,9 @@ export default function IntroSearchBox({ checkViewPort }: Props) {
   };
 
   return (
-    <div className="border-black border-4 w-12em text-5xl py-6 px-4 relative font-bold">
+    <div className="border-black border-4 desktop:w-12em tablet:w-10em w-7em text-5xl py-6 px-4 relative font-bold">
       <h2
-        className={`font-bold w-7em ${
+        className={`font-bold w-7em desktop:text-5xl tablet:text-4xl text-3xl ${
           checkViewPort && 'animate-typing'
         } whitespace-nowrap overflow-hidden border-r border-black`}
       >
