@@ -1,5 +1,5 @@
 # 개인 포트폴리오
-![image](https://github.com/kms99/portfolio/assets/29966870/06166300-e502-44aa-bc3f-6c38ab8698ea)
+![bandicam2024-03-1300-11-48-012-ezgif com-video-to-gif-converter](https://github.com/kms99/portfolio/assets/29966870/30ee653d-1b9a-45b3-bd0a-feb529b543db)
 
 프로젝트 명: 개인 포트폴리오   
 개발 기간: 2023.12 ~ 지속   
