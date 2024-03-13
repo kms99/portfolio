@@ -15,6 +15,7 @@ const config: Config = {
         laptop: '1024px',
         desktop: '1280px',
       },
+
       fontFamily: {
         sub: ['var(--font-pretendard)', 'var(--font-patua)', 'serif'],
         main: ['var(--font-sb)', 'var(--font-patua)', 'sans-serif'],
@@ -53,7 +54,15 @@ const config: Config = {
       },
 
       colors: {
+        baseBlack: '#000000',
+        baseWhite: '#FFFFFF',
+        mainBg: '#FFFFFF',
+        subBg: '#000000',
+        mainFont: '#000000',
+        subFont: '#FFFFFF',
         headerColor: 'rgba(255,255,255,0.5)',
+        lightGray: '#B1B1B1',
+        darkGray: '#6D6D6D',
         backdrop: 'rgba(0,0,0,0.5)',
       },
 
@@ -68,10 +77,6 @@ const config: Config = {
         '0.9rem': '0.9rem',
       },
 
-      backgroundImage: {
-        intro: "url('/img/bg.jpg')",
-      },
-
       boxShadow: {
         headerShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px',
         AboutCardShadow: '5px 0px 8px -1px #555555',
@@ -80,6 +85,7 @@ const config: Config = {
       },
       transitionProperty: {
         z: 'z-index',
+        h: 'height',
       },
       transitionDelay: {
         2000: '2s',

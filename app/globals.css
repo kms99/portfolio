@@ -26,11 +26,36 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
-html{
-  scroll-behavior: smooth!important;
+html {
+  scroll-behavior: smooth !important;
 }
 
-::-webkit-scrollbar{
-  width: 0;  
+::-webkit-scrollbar {
+  width: 0;
   height: 0;
+}
+
+@layer components {
+  .headerMobile {
+    @apply flex flex-col items-center justify-center gap-2 absolute bottom-0 right-0 translate-y-full w-full overflow-hidden bg-lightGray transition-h duration-500;
+  }
+  .headerDesktop {
+    @apply flex flex-row items-center gap-0 relative translate-y-0 h-full w-fit overflow-auto py-0 bg-transparent;
+  }
+  .headerItemMobile {
+    @apply hover:text-white;
+  }
+  .headerItemDesktop {
+    @apply [&+li]:ml-[1rem] w-fit;
+  }
+
+  .searchBoxMobile {
+    @apply w-[12em] py-[1rem] px-[1rem] text-xl;
+  }
+  .searchBoxTablet {
+    @apply w-[12em] py-[1.5rem] px-[1rem] text-4xl;
+  }
+  .searchBoxDesktop {
+    @apply w-[12em] py-[1.5rem] px-[1rem] text-5xl;
+  }
 }
