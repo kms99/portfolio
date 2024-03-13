@@ -17,7 +17,7 @@ export default function IntroBackground() {
     circles = [];
     for (let i = 0; i < 8; i += 1) {
       // 수정: i + 1을 i++로 변경
-      const radius = Math.random() * 50 + 30;
+      const radius = Math.random() * 60 + 30;
       const x = Math.random() * ctx.canvas.width - radius * 2 + radius;
       const y = Math.random() * ctx.canvas.height - radius * 2 + radius;
       const dx = (Math.random() - 0.5) * 2;
