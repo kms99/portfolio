@@ -48,4 +48,14 @@ html {
   .headerItemDesktop {
     @apply [&+li]:ml-[1rem] w-fit;
   }
+
+  .searchBoxMobile {
+    @apply w-[12em] py-[1rem] px-[1rem] text-xl;
+  }
+  .searchBoxTablet {
+    @apply w-[12em] py-[1.5rem] px-[1rem] text-4xl;
+  }
+  .searchBoxDesktop {
+    @apply w-[12em] py-[1.5rem] px-[1rem] text-5xl;
+  }
 }
