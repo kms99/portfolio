@@ -11,13 +11,9 @@ export default function IntroSection() {
   return (
     <motion.div
       id="intro"
-      onViewportLeave={() => {
-        handleCheckViewPort(false);
-      }}
-      onViewportEnter={() => {
-        handleCheckViewPort(true);
-      }}
-      className="min-h-screen h-auto flex justify-center items-center bg-i relative mb-1"
+      onViewportLeave={() => handleCheckViewPort(false)}
+      onViewportEnter={() => handleCheckViewPort(true)}
+      className="min-h-screen h-auto flex justify-center items-center relative"
     >
       <SearchBox checkViewPort={checkViewPort} />
       <DownBounce />

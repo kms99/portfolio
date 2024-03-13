@@ -1,4 +1,5 @@
 import React from 'react';
+import { scrollToElement } from '@/app/utils/globalUtiles';
 import { NavItemsType } from '../layout.type';
 
 interface Props {
@@ -6,14 +7,6 @@ interface Props {
 }
 
 export default function HeaderNavItem({ nav }: Props) {
-  const scrollToElement = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
     <li className="hover:text-white w-full tablet:headerItemDesktop">
       <a
