@@ -21,7 +21,7 @@ export default function ProjectModalInner() {
 
   // TODO: 컴포넌트 분리
   return (
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white cursor-default w-3/5 h-3/4 p-6 box-content font-main">
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white cursor-default w-[80%] desktop:w-3/5 h-3/4 p-6 box-content font-main min-w-[600px]">
       <button
         type="button"
         aria-label="모달 닫기"
@@ -41,7 +41,7 @@ export default function ProjectModalInner() {
         className="w-full h-full"
       >
         <SwiperSlide>
-          <div className="flex items-center gap-5 p-5 content-around w-full h-full">
+          <div className="flex items-center gap-5 p-5 content-around w-full h-full flex-col desktop:flex-row">
             {data?.project_img && <ProjectSwiper imgList={data.project_img} />}
             <ProjectInfo projectData={data!} />
           </div>

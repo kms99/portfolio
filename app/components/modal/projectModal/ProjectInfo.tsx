@@ -42,7 +42,7 @@ export default function ProjectDetailInfo({ projectData }: Props) {
     },
   ];
   return (
-    <div className="flex flex-col w-2/5 h-full overflow-y-scroll">
+    <div className="flex flex-col h-full overflow-y-scroll w-[80%] mt-[2em] desktop:w-2/5 desktop:mt-0">
       <span className="text-sm font-sub">{projectData?.duration}</span>
 
       <div className="flex justify-between mb-2 items-end">
