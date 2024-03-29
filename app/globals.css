@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  min-width: 730px; /* 데스크탑 화면에서는 최소 너비를 730픽셀로 설정 */
+  min-width: 698px; /* 데스크탑 화면에서는 최소 너비를 730픽셀로 설정 */
 }
 
 ::-webkit-scrollbar {
