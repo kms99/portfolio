@@ -17,7 +17,7 @@ export default function ThirdPageFront() {
           data-type="link"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex gap-2 items-center text-base font-bold font-sub border-b-1 border-transparent [&:hover]:border-black w-fit"
+          className="flex gap-2 items-center text-[1em] font-bold font-sub border-b-1 border-transparent [&:hover]:border-black w-fit"
         >
           <LinkClip />
           {section.contexts}
@@ -25,7 +25,7 @@ export default function ThirdPageFront() {
       );
     }
 
-    return <span className="text-base font-bold font-sub">{section.contexts}</span>;
+    return <span className="text-[1em] font-bold font-sub">{section.contexts}</span>;
   };
 
   const CARD_ITEMS = MY_INFO.map(section => {

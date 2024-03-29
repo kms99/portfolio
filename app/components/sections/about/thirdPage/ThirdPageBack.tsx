@@ -8,12 +8,12 @@ import PageNav from '../PageNav';
 export default function ThirdPageBack() {
   return (
     <AboutPageBack countTitle="세번째장" title="나의 경력" detail="현재까지 경력을 알아봅니다.">
-      <div className="mt-10 relative w-1/2 h-1/4">
-        <Image src={sangmyung} alt="sangmyung" width={150} className=" absolute top-8 right-0" />
-        <Image src={army} alt="army" width={150} className="rotate-12 absolute top-1/2 left-0" />
-        <Image src={nbc} alt="nbc" width={150} className="-rotate-12 absolute bottom-0 right-0" />
+      <div className="mt-10 relative w-[50%] h-[40%] z-10">
+        <Image src={sangmyung} alt="sangmyung" className=" absolute top-[2em] right-0 w-[15em]" />
+        <Image src={army} alt="army" className="rotate-12 absolute top-[50%] left-0 w-[15em]" />
+        <Image src={nbc} alt="nbc" className="-rotate-12 absolute bottom-0 right-0 w-[15em]" />
       </div>
-      <span className="-rotate-45 absolute -right-20 bottom-20 text-6xl text-gray-400">MY CAREER</span>
+      <span className="-rotate-45 absolute -right-20 bottom-20 text-[3em] text-gray-400">MY CAREER</span>
 
       <PageNav mode={BookMode.PREV} />
     </AboutPageBack>
