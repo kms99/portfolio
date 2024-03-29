@@ -30,6 +30,10 @@ html {
   scroll-behavior: smooth !important;
 }
 
+body {
+  min-width: 730px;
+}
+
 ::-webkit-scrollbar {
   width: 0;
   height: 0;

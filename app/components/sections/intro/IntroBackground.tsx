@@ -86,5 +86,5 @@ export default function IntroBackground() {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute left-0 top-0 -z-1" />;
+  return <canvas ref={canvasRef} className="absolute left-0 top-0 h-full -z-1" />;
 }

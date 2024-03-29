@@ -17,7 +17,7 @@ export default function ThirdPageFront() {
           data-type="link"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex gap-2 items-center text-[1em] font-bold font-sub border-b-1 border-transparent [&:hover]:border-black w-fit"
+          className="flex gap-2 items-center text-[1em] font-bold font-sub border-b-1 border-transparent [&:hover]:border-black w-fit [&>svg]:scale-[0.8] laptop:[&>svg]:scale-100"
         >
           <LinkClip />
           {section.contexts}

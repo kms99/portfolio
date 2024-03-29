@@ -10,10 +10,8 @@ export default function FirstPageFront() {
       <div className="relative left-0 top-0 w-full h-full flex flex-col items-center">
         <Image
           src={bookImg}
-          width={1920}
-          height={1280}
           alt="first"
-          className="absolute left-0 top-0 w-full h-full object-cover -z-10"
+          className="absolute left-0 top-[2em] w-full h-full object-cover -z-10 laptop:top-0"
         />
         <div className="flex flex-col items-center w-full bg-zinc-400 pb-10">
           <h2 className="mt-28 text-[2em] mb-[1em] font-medium text-black">나를 소개합니다</h2>
