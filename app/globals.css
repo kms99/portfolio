@@ -31,7 +31,14 @@ html {
 }
 
 body {
-  min-width: 730px;
+  min-width: 730px; /* 데스크탑 화면에서는 최소 너비를 730픽셀로 설정 */
+}
+
+/* 데스크탑 화면에 대한 스타일 */
+@media (max-width: 730px) {
+  body {
+    width: 100%;
+  }
 }
 
 ::-webkit-scrollbar {
