@@ -11,7 +11,9 @@ export default function IntroSearchBox({ checkViewPort }: Props) {
   return (
     <div className="relative font-bold border-4 border-black searchBoxMobile tablet:searchBoxTablet desktop:searchBoxDesktop">
       <h2
-        className={`w-7em whitespace-nowrap border-r border-black overflow-hidden ${checkViewPort && 'animate-typing'}`}
+        className={`w-7em whitespace-nowrap border-r border-black overflow-hidden text-inherit ${
+          checkViewPort && 'animate-typing'
+        }`}
       >
         {ONE_LINE_NAME}
       </h2>

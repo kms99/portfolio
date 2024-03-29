@@ -17,7 +17,7 @@ export default function Header() {
   const $noTopStyle = 'shadow-headerShadow backdrop-blur-md';
   const [projectState] = useRecoilState(projectModalState);
 
-  const handleMobileNavClick = () => {
+  const handleMobileNavToggle = () => {
     setMobileNavVisible(prev => !prev);
   };
 
@@ -36,7 +36,7 @@ export default function Header() {
     >
       <button
         type="button"
-        onClick={handleMobileNavClick}
+        onClick={handleMobileNavToggle}
         className="block tablet:hidden"
         aria-label="모바일용 메뉴 버튼"
       >
@@ -44,7 +44,7 @@ export default function Header() {
       </button>
       <ul className={`headerMobile tablet:headerDesktop ${mobileNavVisible ? 'h-[11rem]' : 'h-0'}`}>
         {NAV_ITEMS.map(nav => (
-          <HeaderNavItem key={nav.id} nav={nav} />
+          <HeaderNavItem key={nav.id} nav={nav} handleMobileNavToggle={handleMobileNavToggle} />
         ))}
       </ul>
 
