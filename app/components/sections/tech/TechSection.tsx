@@ -5,7 +5,7 @@ import { TechName } from './constants';
 
 export default function TechSection() {
   return (
-    <section className="flex flex-col items-center relative min-h-screen h-auto" id="tech">
+    <section className="flex flex-col items-center relative mb-[10rem]  h-auto" id="tech">
       <SubTitle>기술스택</SubTitle>
       <div className="flex flex-col [&>section+section]:mt-5">
         {TechName.map(techTitle => (
