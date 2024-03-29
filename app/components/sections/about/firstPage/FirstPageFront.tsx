@@ -16,8 +16,8 @@ export default function FirstPageFront() {
           className="absolute left-0 top-0 w-full h-full object-cover -z-10"
         />
         <div className="flex flex-col items-center w-full bg-zinc-400 pb-10">
-          <h2 className="mt-28 text-3xl mb-10 font-medium text-black">나를 소개합니다</h2>
-          <span className="font-light text-sm text-black animate-pulse">클릭하여 넘겨주세요</span>
+          <h2 className="mt-28 text-[2em] mb-[1em] font-medium text-black">나를 소개합니다</h2>
+          <span className="font-light text-[1em] text-black animate-pulse">클릭하여 넘겨주세요</span>
         </div>
       </div>
     </AboutPageSideDiv>
