@@ -1,6 +1,6 @@
 import './globals.css';
 import localFont from 'next/font/local';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import Header from './components/layout/header/Header';
 import RecoilRootWrapper from './states/recoil/RecoilRootWrapper';
 import TanstackQueryWrapper from './states/tanstackQuery/TanstackQueryWrapper';
@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     site: 'https://kimmyungsub-portfolio.com',
   },
 };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className={`${pretendard.variable} ${sb.variable} ${patua.variable}`}>
