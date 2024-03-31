@@ -2,7 +2,7 @@
 
 import { isTopState } from '@/app/states/recoil/atoms';
 import { Down } from '@/public/assets/intro';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 
 export default function TopButton() {
@@ -11,6 +11,10 @@ export default function TopButton() {
   const handleToTop = () => {
     window.scrollTo(0, 0);
   };
+
+  useEffect(() => {
+    console.log(isTop);
+  }, [isTop]);
 
   return (
     <button

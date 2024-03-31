@@ -23,16 +23,24 @@ export default function Header() {
   };
 
   useEffect(() => {
-    if (!isFirstMountCheckRef.current) {
+    const checkScroll = () => {
       setIsTop(window.scrollY === 0);
+    };
+
+    // 첫 마운트 시에만 상태를 설정합니다.
+    if (!isFirstMountCheckRef.current) {
+      checkScroll(); // 초기 스크롤 위치를 확인합니다.
       isFirstMountCheckRef.current = true;
-    } else {
-      const checkScroll = () => {
-        setIsTop(window.scrollY === 0);
-      };
-      window.addEventListener('scroll', checkScroll);
     }
-  }, [setIsTop]);
+
+    // 스크롤 이벤트 리스너를 추가합니다.
+    window.addEventListener('scroll', checkScroll);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너를 제거합니다.
+    return () => {
+      window.removeEventListener('scroll', checkScroll);
+    };
+  }, [setIsTop]); // 종속성 배열을 비워서 컴포넌트가 마운트될 때만 실행되도록 합니다.
 
   return (
     <header
