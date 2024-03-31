@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useRecoilState } from 'recoil';
 import { isTopState, projectModalState } from '@/app/states/recoil/atoms';
@@ -11,6 +11,7 @@ import ProjectModal from '../../modal/projectModal/ProjectModal';
 
 export default function Header() {
   const [isTop, setIsTop] = useRecoilState(isTopState);
+  const isFirstMountCheckRef = useRef<boolean>(false);
   const [mobileNavVisible, setMobileNavVisible] = useState<boolean>(false);
 
   const $topStyle = 'shadow-none';
@@ -22,10 +23,15 @@ export default function Header() {
   };
 
   useEffect(() => {
-    const checkScroll = () => {
+    if (!isFirstMountCheckRef.current) {
       setIsTop(window.scrollY === 0);
-    };
-    window.addEventListener('scroll', checkScroll);
+      isFirstMountCheckRef.current = true;
+    } else {
+      const checkScroll = () => {
+        setIsTop(window.scrollY === 0);
+      };
+      window.addEventListener('scroll', checkScroll);
+    }
   }, [setIsTop]);
 
   return (

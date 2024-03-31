@@ -1,6 +1,7 @@
 'use client';
 
 import { isTopState } from '@/app/states/recoil/atoms';
+import { Down } from '@/public/assets/intro';
 import React from 'react';
 import { useRecoilValue } from 'recoil';
 
@@ -14,10 +15,11 @@ export default function TopButton() {
   return (
     <button
       type="button"
-      className={`fixed bottom-[2rem] right-[2rem] ${isTop ? 'hidden' : 'block'}`}
+      className={`fixed bottom-[2rem] right-[2rem] cursor-pointer z-50 ${isTop ? 'hidden' : 'block'}`}
       onClick={handleToTop}
+      aria-label="goToTop"
     >
-      up
+      <Down className="rotate-180" />
     </button>
   );
 }
