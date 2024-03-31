@@ -11,3 +11,8 @@ export const bookPageState = atom<number>({
   key: 'bookPageState', // 고유한 키
   default: 0, // 기본값
 });
+
+export const isTopState = atom<boolean>({
+  key: 'isTopState', // 고유한 키
+  default: false, // 기본값
+});

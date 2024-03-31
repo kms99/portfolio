@@ -3,14 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useRecoilState } from 'recoil';
-import { projectModalState } from '@/app/states/recoil/atoms';
+import { isTopState, projectModalState } from '@/app/states/recoil/atoms';
 import Menu from '@/public/assets/header/menu.svg';
 import { NAV_ITEMS } from '../constants';
 import HeaderNavItem from './HeaderNavItem';
 import ProjectModal from '../../modal/projectModal/ProjectModal';
 
 export default function Header() {
-  const [isTop, setIsTop] = useState<boolean>(true);
+  const [isTop, setIsTop] = useRecoilState(isTopState);
   const [mobileNavVisible, setMobileNavVisible] = useState<boolean>(false);
 
   const $topStyle = 'shadow-none';
@@ -26,7 +26,7 @@ export default function Header() {
       setIsTop(window.scrollY === 0);
     };
     window.addEventListener('scroll', checkScroll);
-  }, [isTop]);
+  }, [setIsTop]);
 
   return (
     <header
