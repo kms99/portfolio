@@ -1,16 +1,16 @@
 import './globals.css';
 import localFont from 'next/font/local';
 import { Metadata, Viewport } from 'next';
-import Header from './components/layout/header/Header';
-import RecoilRootWrapper from './states/recoil/RecoilRootWrapper';
-import TanstackQueryWrapper from './states/tanstackQuery/TanstackQueryWrapper';
-import Footer from './components/layout/footer/Footer';
+import TanstackQueryWrapper from './_states/tanstackQuery/TanstackQueryWrapper';
+import RecoilRootWrapper from './_states/recoil/RecoilRootWrapper';
+import Header from './_components/layout/header/Header';
+import Footer from './_components/layout/footer/Footer';
 
 const pretendard = localFont({
   src: [
-    { path: './font/Pretendard-Bold.ttf', style: 'bold' },
-    { path: './font/Pretendard-Medium.ttf', style: 'light' },
-    { path: './font/Pretendard-Light.ttf', style: 'medium' },
+    { path: './_font/Pretendard-Bold.ttf', style: 'bold' },
+    { path: './_font/Pretendard-Medium.ttf', style: 'light' },
+    { path: './_font/Pretendard-Light.ttf', style: 'medium' },
   ],
   display: 'swap',
   variable: '--font-pretendard',
@@ -18,15 +18,15 @@ const pretendard = localFont({
 
 const sb = localFont({
   src: [
-    { path: './font/SB 어그로 B.ttf', style: 'bold' },
-    { path: './font/SB 어그로 L.ttf', style: 'light' },
-    { path: './font/SB 어그로 M.ttf', style: 'medium' },
+    { path: './_font/SB 어그로 B.ttf', style: 'bold' },
+    { path: './_font/SB 어그로 L.ttf', style: 'light' },
+    { path: './_font/SB 어그로 M.ttf', style: 'medium' },
   ],
   display: 'swap',
   variable: '--font-sb',
 });
 
-const patua = localFont({ src: './font/PatuaOne-Regular.ttf', display: 'swap', variable: '--font-patua' });
+const patua = localFont({ src: './_font/PatuaOne-Regular.ttf', display: 'swap', variable: '--font-patua' });
 
 export const metadata: Metadata = {
   title: 'FE 김명섭 포트폴리오',
