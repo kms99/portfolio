@@ -3,7 +3,6 @@ import localFont from 'next/font/local';
 import { Metadata, Viewport } from 'next';
 import TanstackQueryWrapper from './_states/tanstackQuery/TanstackQueryWrapper';
 import RecoilRootWrapper from './_states/recoil/RecoilRootWrapper';
-import Header from './_components/layout/header/Header';
 import Footer from './_components/layout/footer/Footer';
 
 const pretendard = localFont({
@@ -67,7 +66,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <TanstackQueryWrapper>
           <RecoilRootWrapper>
-            <Header />
             {children}
             <Footer />
             <div id="modal-portal" />
